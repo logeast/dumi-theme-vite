@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "../",
+    "strict": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": [
+        "*"
+      ],
+      "@@/*": [
+        ".umi/*"
+      ],
+      "umi": [
+        "/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/.pnpm/umi@4.0.32_r2aw3peds5c3otmdu3prwcbm3y/node_modules/umi"
+      ],
+      "umi/typings": [
+        ".umi/typings"
+      ]
+    }
+  },
+  "include": [
+    "../.umirc.ts",
+    "../**/*.d.ts",
+    "../**/*.ts",
+    "../**/*.tsx"
+  ]
+}
