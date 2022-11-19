@@ -29,6 +29,6 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
       - name: Publish package
-        run: pnpm -r publish
+        run: pnpm -r --no-git-checks publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
