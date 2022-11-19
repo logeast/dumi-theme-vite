@@ -13,6 +13,9 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepublishOnly": "father doctor && npm run build"
   },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
   "keywords": [
     "dumi",
     "dumi-theme"
