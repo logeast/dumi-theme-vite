@@ -3,7 +3,7 @@
 // DO NOT CHANGE IT MANUALLY!
 import React, { useState, useEffect, useRef } from 'react';
 import { useOutlet, history } from 'dumi';
-import { SiteContext } from '/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/.pnpm/dumi@2.0.2_r2aw3peds5c3otmdu3prwcbm3y/node_modules/dumi/dist/client/theme-api/context.js';
+import { SiteContext } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/dumi/dist/client/theme-api/context.js';
 import { demos, components } from '../meta';
 import { locales } from '../locales/config';
 

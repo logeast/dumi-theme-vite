@@ -1,0 +1,22 @@
+{
+  "a": "嘿",
+  "header.search.placeholder": "输入关键字搜索...",
+  "previewer.actions.code.expand": "展开代码",
+  "previewer.actions.code.shrink": "收起代码",
+  "previewer.actions.codesandbox": "在 CodeSandbox 中打开",
+  "previewer.actions.codepen": "在 CodePen 中打开（未实现）",
+  "previewer.actions.stackblitz": "在 StackBlitz 中打开",
+  "previewer.actions.separate": "在独立页面中打开",
+  "404.title": "页面未找到",
+  "404.back": "返回首页",
+  "api.component.name": "属性名",
+  "api.component.description": "描述",
+  "api.component.type": "类型",
+  "api.component.default": "默认值",
+  "api.component.required": "(必选)",
+  "api.component.loading": "属性定义正在解析中，稍等片刻...",
+  "api.component.not.found": "未找到 {id} 组件的属性定义",
+  "content.tabs.default": "文档",
+  "search.not.found": "未找到相关内容",
+  "layout.sidebar.btn": "侧边菜单"
+}

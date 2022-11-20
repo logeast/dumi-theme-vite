@@ -1,7 +1,7 @@
 {
   "name": "dumi-theme-vite",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.5",
+  "description": "A theme package similar in appearance to Vite Document for the dumi framework.",
   "types": "dist/types.d.ts",
   "scripts": {
     "dev": "father dev",
@@ -16,6 +16,11 @@
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logeast/dumi-theme-vite.git"
+  },
+  "homepage": "https://github.com/logeast/dumi-theme-vite/tree/main/#readme",
   "keywords": [
     "dumi",
     "dumi-theme"
@@ -59,20 +64,20 @@
     "react-dom": ">=16.9.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "@umijs/lint": "^4.0.0",
-    "dumi": "^2.0.0-rc.0",
-    "eslint": "^8.23.0",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@umijs/lint": "^4.0.32",
+    "dumi": "^2.0.2",
+    "eslint": "^8.28.0",
     "father": "^4.1.0",
-    "father-plugin-dumi-theme": "^1.0.0-beta.0",
-    "husky": "^8.0.1",
+    "father-plugin-dumi-theme": "^1.0.0-rc.1",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "prettier-plugin-organize-imports": "^3.0.0",
-    "prettier-plugin-packagejson": "^2.2.18",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "stylelint": "^14.9.1"
+    "prettier-plugin-organize-imports": "^3.2.0",
+    "prettier-plugin-packagejson": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stylelint": "^14.15.0"
   }
 }

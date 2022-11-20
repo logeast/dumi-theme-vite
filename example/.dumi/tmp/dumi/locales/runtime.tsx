@@ -3,8 +3,8 @@
 // DO NOT CHANGE IT MANUALLY!
 import { history } from 'dumi';
 import React, { useState, useLayoutEffect, useCallback, type ReactNode } from 'react';
-import { RawIntlProvider, createIntl, createIntlCache } from '/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/.pnpm/react-intl@6.2.1_react@18.2.0/node_modules/react-intl';
-import { useIsomorphicLayoutEffect } from '/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/.pnpm/dumi@2.0.2_r2aw3peds5c3otmdu3prwcbm3y/node_modules/dumi/dist/client/theme-api/utils.js'
+import { RawIntlProvider, createIntl, createIntlCache } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/react-intl';
+import { useIsomorphicLayoutEffect } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/dumi/dist/client/theme-api/utils.js'
 import { locales, messages } from './config';
 
 const cache = createIntlCache();

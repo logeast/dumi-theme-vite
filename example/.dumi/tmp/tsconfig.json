@@ -19,7 +19,7 @@
         ".umi/*"
       ],
       "umi": [
-        "/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/.pnpm/umi@4.0.32_r2aw3peds5c3otmdu3prwcbm3y/node_modules/umi"
+        "/Users/logeast/Documents/dumi-theme-vite/node_modules/umi"
       ],
       "umi/typings": [
         ".umi/typings"

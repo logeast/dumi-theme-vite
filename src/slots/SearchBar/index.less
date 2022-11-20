@@ -1,0 +1,107 @@
+@import (reference) '../../styles/variables.less';
+
+.@{prefix}-search-bar {
+  position: relative;
+
+  @media @mobile {
+    // TODO: support search for mobile devices
+    display: none;
+  }
+
+  &:not(:last-child) {
+    margin-inline-end: 28px;
+  }
+
+  > svg {
+    position: absolute;
+    top: 50%;
+    margin-top: 1px;
+    inset-inline-start: 16px;
+    width: 16px;
+    fill: @c-text-note;
+    transform: translateY(-50%);
+  }
+
+  > input {
+    width: 280px;
+    height: 40px;
+    padding: 0;
+    padding-inline-start: 40px;
+    padding-inline-end: 12px;
+    color: @c-text;
+    font-size: 14px;
+    border: 1px solid @c-border;
+    border-radius: 20px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s;
+    background-color: transparent;
+
+    &:focus {
+      border-color: fade(@c-primary, 50%);
+      background-color: #fff;
+      box-shadow: 0 0 0 3px fade(@c-primary, 10%);
+
+      ~ .@{prefix}-search-shortcut {
+        opacity: 0;
+      }
+    }
+  }
+
+  .@{prefix}-search-shortcut {
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 11px;
+    display: inline-block;
+    padding: 4px 8px;
+    color: @c-text-note;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    background-color: fade(#fff, 80%);
+    border-radius: 11px;
+    border: 1px solid @c-border;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    pointer-events: none;
+
+    @media @mobile {
+      display: none;
+    }
+  }
+
+  .@{prefix}-search-popover {
+    position: absolute;
+    top: 100%;
+    inset-inline-end: 0;
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    max-height: 460px;
+    margin-top: 18px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 20%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      inset-inline-end: 100px;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-bottom-color: #fff;
+    }
+
+    > section {
+      flex: 1;
+      min-height: 60px;
+      overflow: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      border-radius: inherit;
+    }
+  }
+}
