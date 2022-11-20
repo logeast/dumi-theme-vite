@@ -6,3 +6,4 @@
 .dumi/tmp-production
 .DS_Store
 .pnpm-debug.log
+.dumi
