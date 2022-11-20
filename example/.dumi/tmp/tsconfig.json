@@ -12,24 +12,13 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@/*": [
-        "*"
-      ],
-      "@@/*": [
-        ".umi/*"
-      ],
+      "@/*": ["*"],
+      "@@/*": [".umi/*"],
       "umi": [
-        "/Users/logeast/Documents/dumi-theme-vite/node_modules/umi"
+        "/Users/logeast/Documents/dumi-theme-vite/node_modules/.pnpm/umi@4.0.32_xgbqj6fguo7kan2ufc2v2cdr6u/node_modules/umi"
       ],
-      "umi/typings": [
-        ".umi/typings"
-      ]
+      "umi/typings": [".umi/typings"]
     }
   },
-  "include": [
-    "../.umirc.ts",
-    "../**/*.d.ts",
-    "../**/*.ts",
-    "../**/*.tsx"
-  ]
+  "include": ["../.umirc.ts", "../**/*.d.ts", "../**/*.ts", "../**/*.tsx"]
 }

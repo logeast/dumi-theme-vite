@@ -3,7 +3,7 @@
 // DO NOT CHANGE IT MANUALLY!
 import React, { useState, useEffect, useRef } from 'react';
 import { useOutlet, history } from 'dumi';
-import { SiteContext } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/dumi/dist/client/theme-api/context.js';
+import { SiteContext } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/.pnpm/dumi@2.0.2_xgbqj6fguo7kan2ufc2v2cdr6u/node_modules/dumi/dist/client/theme-api/context.js';
 import { demos, components } from '../meta';
 import { locales } from '../locales/config';
 
@@ -26,15 +26,20 @@ export default function DumiContextWrapper() {
   }, []);
 
   return (
-    <SiteContext.Provider value={{
-      pkg: {},
-      demos,
-      components,
-      locales,
-      loading,
-      setLoading,
-      themeConfig: {"footer":"Copyright © 2022 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","hello":"world"},
-    }}>
+    <SiteContext.Provider
+      value={{
+        pkg: {},
+        demos,
+        components,
+        locales,
+        loading,
+        setLoading,
+        themeConfig: {
+          footer:
+            'Copyright © 2022 | Powered by <a href="https://d.umijs.org" target="_blank" rel="noreferrer">dumi</a>',
+        },
+      }}
+    >
       {outlet}
     </SiteContext.Provider>
   );

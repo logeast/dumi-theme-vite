@@ -3,14 +3,13 @@
 // DO NOT CHANGE IT MANUALLY!
 import './core/polyfill';
 
-import { renderClient } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/@umijs/renderer-react';
+import { renderClient } from '/Users/logeast/Documents/dumi-theme-vite/node_modules/.pnpm/@umijs+renderer-react@4.0.32_ef5jwxihqo6n7gxfmzogljlgcm/node_modules/@umijs/renderer-react';
 import { getRoutes } from './core/route';
 import { createPluginManager } from './core/plugin';
 import { createHistory } from './core/history';
 import { ApplyPluginsType } from 'umi';
 
-
-const publicPath = "/";
+const publicPath = '/';
 const runtimePublicPath = false;
 
 async function render() {
@@ -27,7 +26,7 @@ async function render() {
     },
   });
 
-  return (pluginManager.applyPlugins({
+  return pluginManager.applyPlugins({
     key: 'render',
     type: ApplyPluginsType.compose,
     initialValue() {
@@ -53,9 +52,8 @@ async function render() {
       };
       return renderClient(context);
     },
-  }))();
+  })();
 }
-
 
 // always remove trailing slash from location.pathname
 if (
