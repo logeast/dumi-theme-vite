@@ -114,133 +114,133 @@ export async function getRoutes() {
       '404': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "__Users__logeast__Documents__dumi-theme-vite__node_modules__.pnpm__dumi_2.0.2_xgbqj6fguo7kan2ufc2v2cdr6u__node_modules__dumi__dist__client__pages__404" */ '/Users/logeast/Documents/dumi-theme-vite/node_modules/.pnpm/dumi@2.0.2_xgbqj6fguo7kan2ufc2v2cdr6u/node_modules/dumi/dist/client/pages/404.js'
+            /* webpackChunkName: "__Users__logeast__Documents__gitee__dumi-theme-vite__node_modules__dumi__dist__client__pages__404" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/dumi/dist/client/pages/404.js'
           ),
       ),
       'dumi-context-layout': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "dumi__tmp__dumi__theme__ContextWrapper" */ '/Users/logeast/Documents/dumi-theme-vite/example/.dumi/tmp/dumi/theme/ContextWrapper.tsx'
+            /* webpackChunkName: "dumi__tmp__dumi__theme__ContextWrapper" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/.dumi/tmp/dumi/theme/ContextWrapper.tsx'
           ),
       ),
       DocLayout: React.lazy(
         () =>
           import(
-            /* webpackChunkName: "dumi__theme__layouts__DocLayout__index" */ '/Users/logeast/Documents/dumi-theme-vite/example/.dumi/theme/layouts/DocLayout/index.tsx'
+            /* webpackChunkName: "dumi__theme__layouts__DocLayout__index" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/.dumi/theme/layouts/DocLayout/index.tsx'
           ),
       ),
       'docs/guide/conventional-routing': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__conventional-routing.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/conventional-routing.md'
+            /* webpackChunkName: "docs__guide__conventional-routing.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/conventional-routing.md'
           ),
       ),
       'docs/guide/project-structure': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__project-structure.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/project-structure.md'
+            /* webpackChunkName: "docs__guide__project-structure.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/project-structure.md'
           ),
       ),
       'docs/guide/page-config': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__page-config.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/page-config.md'
+            /* webpackChunkName: "docs__guide__page-config.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/page-config.md'
           ),
       ),
       'docs/guide/initialize': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__initialize.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/initialize.md'
+            /* webpackChunkName: "docs__guide__initialize.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/initialize.md'
           ),
       ),
       'docs/guide/write-demo': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__write-demo.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/write-demo.md'
+            /* webpackChunkName: "docs__guide__write-demo.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/write-demo.md'
           ),
       ),
       'docs/config/markdown': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__config__markdown.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/config/markdown.md'
+            /* webpackChunkName: "docs__config__markdown.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/config/markdown.md'
           ),
       ),
       'docs/guide/upgrading': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__upgrading.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/upgrading.md'
+            /* webpackChunkName: "docs__guide__upgrading.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/upgrading.md'
           ),
       ),
       'docs/guide/markdown': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__markdown.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/markdown.md'
+            /* webpackChunkName: "docs__guide__markdown.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/markdown.md'
           ),
       ),
       'docs/guide/page-tab': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__page-tab.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/page-tab.md'
+            /* webpackChunkName: "docs__guide__page-tab.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/page-tab.md'
           ),
       ),
       'docs/theme/default': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__theme__default.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/theme/default.md'
+            /* webpackChunkName: "docs__theme__default.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/theme/default.md'
           ),
       ),
       'docs/config/index': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__config__index.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/config/index.md'
+            /* webpackChunkName: "docs__config__index.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/config/index.md'
           ),
       ),
       'docs/config/demo': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__config__demo.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/config/demo.md'
+            /* webpackChunkName: "docs__config__demo.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/config/demo.md'
           ),
       ),
       'docs/guide/index': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__index.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/index.md'
+            /* webpackChunkName: "docs__guide__index.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/index.md'
           ),
       ),
       'docs/theme/index': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__theme__index.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/theme/index.md'
+            /* webpackChunkName: "docs__theme__index.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/theme/index.md'
           ),
       ),
       'docs/guide/i18n': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__i18n.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/i18n.md'
+            /* webpackChunkName: "docs__guide__i18n.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/i18n.md'
           ),
       ),
       'docs/guide/faq': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__guide__faq.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/guide/faq.md'
+            /* webpackChunkName: "docs__guide__faq.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/guide/faq.md'
           ),
       ),
       'docs/theme/api': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__theme__api.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/theme/api.md'
+            /* webpackChunkName: "docs__theme__api.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/theme/api.md'
           ),
       ),
       'docs/index': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "docs__index.md" */ '/Users/logeast/Documents/dumi-theme-vite/example/docs/index.md'
+            /* webpackChunkName: "docs__index.md" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/example/docs/index.md'
           ),
       ),
       'demo-render': React.lazy(
         () =>
           import(
-            /* webpackChunkName: "__Users__logeast__Documents__dumi-theme-vite__node_modules__.pnpm__dumi_2.0.2_xgbqj6fguo7kan2ufc2v2cdr6u__node_modules__dumi__dist__client__pages__Demo__index" */ '/Users/logeast/Documents/dumi-theme-vite/node_modules/.pnpm/dumi@2.0.2_xgbqj6fguo7kan2ufc2v2cdr6u/node_modules/dumi/dist/client/pages/Demo/index.js'
+            /* webpackChunkName: "__Users__logeast__Documents__gitee__dumi-theme-vite__node_modules__dumi__dist__client__pages__Demo__index" */ '/Users/logeast/Documents/gitee/dumi-theme-vite/node_modules/dumi/dist/client/pages/Demo/index.js'
           ),
       ),
     },

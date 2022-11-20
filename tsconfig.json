@@ -5,6 +5,10 @@
     "esModuleInterop": true,
     "jsx": "react",
     "skipLibCheck": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "dumi": ["."],
+      "dumi/theme/*": ["src/"]
+    }
   }
 }

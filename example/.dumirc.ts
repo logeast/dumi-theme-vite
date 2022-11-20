@@ -1,3 +1,5 @@
 import { defineConfig } from 'dumi';
 
-export default defineConfig({});
+export default defineConfig({
+  mfsu: false,
+});
