@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "father build",
+    "build:example": "cd example && npm run build",
     "dev": "father dev",
     "dev:example": "cd example && npm run start",
     "lint": "npm run lint:es && npm run lint:css",
