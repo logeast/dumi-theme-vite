@@ -26,8 +26,8 @@ const Header: FC = () => {
         </section>
         <section className="dumi-vite-header-right">
           <SearchBar />
-          <Navbar />
           <div className="dumi-vite-header-right-aside">
+            <Navbar />
             <LangSwitch />
             <RtlSwitch />
           </div>

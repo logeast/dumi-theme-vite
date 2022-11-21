@@ -49,6 +49,9 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "dependencies": {
+    "@ant-design/icons-svg": "^4.2.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
@@ -62,14 +65,12 @@
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
     "stylelint": "^14.9.1"
   },
   "peerDependencies": {
-    "dumi": "^2.0.0-rc.0",
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+    "dumi": "^2.0.0-rc.0"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"

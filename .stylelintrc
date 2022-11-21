@@ -1,3 +1,27 @@
 {
-  "extends": "@umijs/lint/dist/config/stylelint"
+  "extends": "@umijs/lint/dist/config/stylelint",
+  "rules": {
+    "function-name-case": [
+      "lower"
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "fade",
+          "fadeout",
+          "tint",
+          "darken",
+          "ceil",
+          "fadein",
+          "floor",
+          "unit",
+          "shade",
+          "lighten",
+          "percentage",
+          "-"
+        ]
+      }
+    ]
+  }
 }
