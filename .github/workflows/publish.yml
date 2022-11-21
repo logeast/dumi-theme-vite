@@ -24,11 +24,13 @@ jobs:
           cache: 'pnpm'
 
       - name: Install deps
-        run: pnpm install
+        # run: pnpm install
+        run: npm install
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
       - name: Publish package
-        run: pnpm -r --no-git-checks publish
+        # run: pnpm -r --no-git-checks publish
+        run: npm -r --no-git-checks publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

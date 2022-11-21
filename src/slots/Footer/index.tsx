@@ -9,7 +9,7 @@ const Footer: FC = () => {
 
   return (
     <div
-      className="dumi-default-footer"
+      className="dumi-vite-footer"
       dangerouslySetInnerHTML={{ __html: themeConfig.footer }}
     />
   );

@@ -2,7 +2,7 @@ import React, { type FC, type ReactNode } from 'react';
 import './index.less';
 
 const HeroTitle: FC<{ children: ReactNode }> = (props) => (
-  <h1 className="dumi-default-hero-title">
+  <h1 className="dumi-vite-hero-title">
     <span>{props.children}</span>
   </h1>
 );

@@ -7,7 +7,7 @@ const Navbar: FC = () => {
   const { pathname } = useLocation();
 
   return (
-    <ul className="dumi-default-navbar">
+    <ul className="dumi-vite-navbar">
       {nav.map((item) => (
         <li key={item.link}>
           {/^(\w+:)\/\/|^(mailto|tel):/.test(item.link) ? (

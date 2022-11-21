@@ -144,7 +144,7 @@ const SearchResult: FC<{ data: ISearchResult; loading: boolean }> = (props) => {
 
   return (
     <div
-      className="dumi-default-search-result"
+      className="dumi-vite-search-result"
       onMouseEnter={() => setActiveIndex(-1)}
       // for ux, only hide result when mouse up
       onMouseDownCapture={(ev) => ev.preventDefault()}
@@ -176,7 +176,7 @@ const SearchResult: FC<{ data: ISearchResult; loading: boolean }> = (props) => {
           )}
         </dl>
       ) : (
-        <div className="dumi-default-search-empty">
+        <div className="dumi-vite-search-empty">
           <IconInbox />
           <FormattedMessage id="search.not.found" />
         </div>

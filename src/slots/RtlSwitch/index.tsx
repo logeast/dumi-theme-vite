@@ -19,7 +19,7 @@ const RtlSwitch: FC = () => {
 
   return (
     <span
-      className="dumi-default-lang-switch"
+      className="dumi-vite-lang-switch"
       onClick={() => {
         if (rtl) {
           document.documentElement.removeAttribute('data-direction');

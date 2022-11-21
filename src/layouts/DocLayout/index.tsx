@@ -1,13 +1,13 @@
 import { ReactComponent as IconSidebar } from '@ant-design/icons-svg/inline-svg/outlined/align-left.svg';
 import { Helmet, useIntl, useOutlet, useRouteMeta, useSidebarData } from 'dumi';
-import Content from 'dumi/theme/slots/Content';
-import Features from 'dumi/theme/slots/Features';
-import Footer from 'dumi/theme/slots/Footer';
-import Header from 'dumi/theme/slots/Header';
-import Hero from 'dumi/theme/slots/Hero';
-import Sidebar from 'dumi/theme/slots/Sidebar';
-import Toc from 'dumi/theme/slots/Toc';
 import React, { useState, type FC } from 'react';
+import Content from '../../slots/Content';
+import Features from '../../slots/Features';
+import Footer from '../../slots/Footer';
+import Header from '../../slots/Header';
+import Hero from '../../slots/Hero';
+import Sidebar from '../../slots/Sidebar';
+import Toc from '../../slots/Toc';
 import './index.less';
 
 const DocLayout: FC = () => {
@@ -19,7 +19,7 @@ const DocLayout: FC = () => {
 
   return (
     <div
-      className="dumi-default-doc-layout"
+      className="dumi-vite-doc-layout"
       data-mobile-sidebar-active={showSidebar || undefined}
       onClick={() => setShowSidebar(false)}
     >
@@ -42,10 +42,10 @@ const DocLayout: FC = () => {
       <Hero />
       <Features />
       {sidebar && (
-        <div className="dumi-default-doc-layout-mobile-bar">
+        <div className="dumi-vite-doc-layout-mobile-bar">
           <button
             type="button"
-            className="dumi-default-sidebar-btn"
+            className="dumi-vite-sidebar-btn"
             onClick={(ev) => {
               ev.stopPropagation();
               setShowSidebar((v) => !v);
@@ -63,7 +63,7 @@ const DocLayout: FC = () => {
           <Footer />
         </Content>
         {fm.toc === 'content' && (
-          <div className="dumi-default-doc-layout-toc-wrapper">
+          <div className="dumi-vite-doc-layout-toc-wrapper">
             <h4>TABLE OF CONTENTS</h4>
             <Toc />
           </div>

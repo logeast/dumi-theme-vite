@@ -36,7 +36,7 @@ const SearchBar: FC = () => {
   }, []);
 
   return (
-    <div className="dumi-default-search-bar">
+    <div className="dumi-vite-search-bar">
       <IconSearch />
       <input
         onCompositionStart={() => (imeWaiting.current = true)}
@@ -69,9 +69,9 @@ const SearchBar: FC = () => {
         placeholder={intl.formatMessage({ id: 'header.search.placeholder' })}
         ref={input}
       />
-      <span className="dumi-default-search-shortcut">{symbol} K</span>
+      <span className="dumi-vite-search-shortcut">{symbol} K</span>
       {keywords.trim() && focusing && (result.length || !loading) && (
-        <div className="dumi-default-search-popover">
+        <div className="dumi-vite-search-popover">
           <section>
             <SearchResult data={result} loading={loading} />
           </section>

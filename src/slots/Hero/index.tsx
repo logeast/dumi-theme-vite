@@ -9,7 +9,7 @@ const Hero: FC = () => {
   if (!('hero' in frontmatter)) return null;
 
   return (
-    <div className="dumi-default-hero">
+    <div className="dumi-vite-hero">
       {frontmatter.hero!.title && (
         <HeroTitle>{frontmatter.hero!.title}</HeroTitle>
       )}
@@ -19,7 +19,7 @@ const Hero: FC = () => {
         />
       )}
       {Boolean(frontmatter.hero!.actions?.length) && (
-        <div className="dumi-default-hero-actions">
+        <div className="dumi-vite-hero-actions">
           {frontmatter.hero!.actions!.map(({ text, link }) =>
             /^(\w+:)\/\/|^(mailto|tel):/.test(link) ? (
               <a href={link} target="_blank" rel="noreferrer" key={text}>

@@ -4,25 +4,22 @@
   display: inline-flex;
   align-items: center;
   color: @c-text;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 1;
   font-weight: 500;
   text-decoration: none;
+  transition: opacity 0.25s;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media @mobile {
-    font-size: 18px;
-
-    img {
-      height: 32px;
-    }
+    font-size: 16px;
   }
 
   img {
-    margin-inline-end: 10px;
-    height: 40px;
-
-    @media @mobile {
-      height: 32px;
-    }
+    margin-inline-end: 8px;
+    height: 24px;
   }
 }

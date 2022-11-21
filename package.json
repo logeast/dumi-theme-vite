@@ -2,36 +2,30 @@
   "name": "dumi-theme-vite",
   "version": "0.0.5",
   "description": "A theme package similar in appearance to Vite Document for the dumi framework.",
-  "types": "dist/types.d.ts",
-  "scripts": {
-    "dev": "father dev",
-    "dev:example": "cd example && npm run start",
-    "build": "father build",
-    "prepare": "husky install && father link-dev-theme",
-    "lint": "npm run lint:es && npm run lint:css",
-    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
-    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build"
-  },
-  "engines": {
-    "node": "^14.18.0 || >=16.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/logeast/dumi-theme-vite.git"
-  },
-  "homepage": "https://github.com/logeast/dumi-theme-vite/tree/main/#readme",
   "keywords": [
     "dumi",
     "dumi-theme"
   ],
-  "authors": [
-    "logeast@outlook.com"
-  ],
+  "homepage": "https://github.com/logeast/dumi-theme-vite/tree/main/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logeast/dumi-theme-vite.git"
+  },
   "license": "MIT",
+  "types": "dist/types.d.ts",
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "father build",
+    "dev": "father dev",
+    "dev:example": "cd example && npm run start",
+    "lint": "npm run lint:es && npm run lint:css",
+    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "prepare": "husky install && father link-dev-theme",
+    "prepublishOnly": "father doctor && npm run build"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -54,30 +48,35 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@umijs/lint": "^4.0.0",
+    "dumi": "^2.0.0-rc.0",
+    "eslint": "^8.23.0",
+    "father": "^4.1.0",
+    "father-plugin-dumi-theme": "^1.0.0-beta.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "stylelint": "^14.9.1"
   },
-  "packageManager": "pnpm@7.15.0",
   "peerDependencies": {
     "dumi": "^2.0.0-rc.0",
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^17.2.0",
-    "@commitlint/config-conventional": "^17.2.0",
-    "@umijs/lint": "^4.0.32",
-    "dumi": "^2.0.2",
-    "eslint": "^8.28.0",
-    "father": "^4.1.0",
-    "father-plugin-dumi-theme": "^1.0.0-rc.1",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "prettier-plugin-organize-imports": "^3.2.0",
-    "prettier-plugin-packagejson": "^2.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "stylelint": "^14.15.0"
-  }
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "logeast@outlook.com"
+  ]
 }

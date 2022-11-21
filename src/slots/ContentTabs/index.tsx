@@ -20,7 +20,7 @@ const ContentTabs: FC<IContentTabsProps> = ({
   // TODO: tab.Extra & tab.Action render
 
   return Boolean(tabs?.length) ? (
-    <ul className="dumi-default-content-tabs">
+    <ul className="dumi-vite-content-tabs">
       <li onClick={() => onChange()} data-active={!key || undefined}>
         <button type="button">
           {intl.formatMessage({ id: 'content.tabs.default' })}

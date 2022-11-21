@@ -38,7 +38,7 @@ const Toc: FC = () => {
           prevIndexRef.current = currentElementIndexInViewport;
 
         return (
-          <ul className="dumi-default-toc">
+          <ul className="dumi-vite-toc">
             {toc
               .filter(({ depth }) => depth > 1 && depth < 4)
               .map((item, i) => {

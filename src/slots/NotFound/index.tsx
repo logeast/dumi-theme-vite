@@ -7,7 +7,7 @@ const Page404: FC = () => {
   const locale = useLocale();
 
   return (
-    <div className="dumi-default-not-found">
+    <div className="dumi-vite-not-found">
       <h1>{intl.formatMessage({ id: '404.title' })}</h1>
       <Link to={'base' in locale ? locale.base : '/'} replace>
         {intl.formatMessage({ id: '404.back' })} →

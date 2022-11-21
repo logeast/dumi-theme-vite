@@ -7,10 +7,7 @@ const Content: FC<{ children: ReactNode }> = (props) => {
   const sidebar = useSidebarData();
 
   return (
-    <div
-      className="dumi-default-content"
-      data-no-sidebar={!sidebar || undefined}
-    >
+    <div className="dumi-vite-content" data-no-sidebar={!sidebar || undefined}>
       {props.children}
     </div>
   );

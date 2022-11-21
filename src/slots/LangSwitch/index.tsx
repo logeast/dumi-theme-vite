@@ -45,7 +45,7 @@ const SingleSwitch: FC<{ locale: ILocaleItem; current: ILocaleItem }> = ({
   }, [pathname, current.id, locale.id]);
 
   return (
-    <Link className="dumi-default-lang-switch" to={path}>
+    <Link className="dumi-vite-lang-switch" to={path}>
       {locale.name}
     </Link>
   );
@@ -60,7 +60,7 @@ const LangSwitch: FC = () => {
   if (locales.length <= 1) return null;
 
   return locales.length > 2 ? (
-    <div className="dumi-default-lang-select">
+    <div className="dumi-vite-lang-select">
       <select
         defaultValue={locale}
         onChange={(ev) => {

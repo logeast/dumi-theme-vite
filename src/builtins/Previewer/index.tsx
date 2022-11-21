@@ -15,14 +15,14 @@ const Previewer: FC<IPreviewerProps> = (props) => {
   return (
     <div
       id={props.asset.id}
-      className="dumi-default-previewer"
+      className="dumi-vite-previewer"
       data-debug={props.debug}
       data-active={hash === link || undefined}
       data-h5={isH5}
     >
       {!isH5 && (
         <div
-          className="dumi-default-previewer-demo"
+          className="dumi-vite-previewer-demo"
           style={{ background: props.background }}
           data-compact={props.compact || undefined}
           data-transform={props.transform || undefined}
@@ -42,9 +42,9 @@ const Previewer: FC<IPreviewerProps> = (props) => {
           )}
         </div>
       )}
-      <div className="dumi-default-previewer-meta" data-h5={isH5}>
+      <div className="dumi-vite-previewer-meta" data-h5={isH5}>
         {(props.title || props.debug) && (
-          <div className="dumi-default-previewer-desc">
+          <div className="dumi-vite-previewer-desc">
             <h5>
               <a href={link}>
                 {props.debug && <strong>DEV ONLY</strong>}
@@ -62,8 +62,8 @@ const Previewer: FC<IPreviewerProps> = (props) => {
 
         {!isH5 && <PreviewerActions {...props} />}
         {isH5 && (
-          <div className="dumi-default-previewer-flex">
-            <div className="dumi-default-previewer-flex-actions">
+          <div className="dumi-vite-previewer-flex">
+            <div className="dumi-vite-previewer-flex-actions">
               <PreviewerActions {...props} />
             </div>
             <Device url={props.demoUrl} />

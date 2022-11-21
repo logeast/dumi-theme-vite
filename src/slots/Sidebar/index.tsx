@@ -11,9 +11,9 @@ const Sidebar: FC = () => {
   if (!sidebar) return null;
 
   return (
-    <div className="dumi-default-sidebar">
+    <div className="dumi-vite-sidebar">
       {sidebar.map((item, i) => (
-        <dl className="dumi-default-sidebar-group" key={String(i)}>
+        <dl className="dumi-vite-sidebar-group" key={String(i)}>
           {item.title && <dt>{item.title}</dt>}
           {item.children.map((child) => (
             <dd key={child.link}>

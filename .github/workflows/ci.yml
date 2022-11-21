@@ -25,10 +25,12 @@ jobs:
           cache: 'pnpm'
 
       - name: Install deps
-        run: pnpm install
+        # run: pnpm install
+        run: npm install
 
       - name: Build
         run: pnpm prepublishOnly
+        run: npm run prepublishOnly
 
   # lint:
   #   timeout-minutes: 10

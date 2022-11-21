@@ -56,10 +56,10 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
 
   return (
     <>
-      <div className="dumi-default-previewer-actions">
+      <div className="dumi-vite-previewer-actions">
         {!props.disabledActions?.includes('CSB') && (
           <button
-            className="dumi-default-previewer-action-btn"
+            className="dumi-vite-previewer-action-btn"
             type="button"
             data-dumi-tooltip={intl.formatMessage({
               id: 'previewer.actions.codesandbox',
@@ -71,7 +71,7 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
         )}
         {/* {!props.disabledActions?.includes('CODEPEN') && (
           <button
-            className="dumi-default-previewer-action-btn"
+            className="dumi-vite-previewer-action-btn"
             type="button"
             data-dumi-tooltip={intl.formatMessage({
               id: 'previewer.actions.codepen',
@@ -82,7 +82,7 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
         )} */}
         {!props.disabledActions?.includes('STACKBLITZ') && (
           <button
-            className="dumi-default-previewer-action-btn"
+            className="dumi-vite-previewer-action-btn"
             type="button"
             data-dumi-tooltip={intl.formatMessage({
               id: 'previewer.actions.stackblitz',
@@ -98,7 +98,7 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
             target="_blank"
             rel="noreferrer"
             href={props.demoUrl}
-            className="dumi-default-previewer-action-btn"
+            className="dumi-vite-previewer-action-btn"
             data-dumi-tooltip={intl.formatMessage({
               id: 'previewer.actions.separate',
             })}
@@ -109,7 +109,7 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
         <PreviewerActionsExtra {...props} />
         {!isH5 && (
           <button
-            className="dumi-default-previewer-action-btn"
+            className="dumi-vite-previewer-action-btn"
             type="button"
             onClick={() => setShowCode((prev) => !prev)}
             data-dumi-tooltip={intl.formatMessage({
@@ -122,11 +122,11 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
       </div>
       {showCode && (
         <>
-          <div className="dumi-default-previewer-sources">
+          <div className="dumi-vite-previewer-sources">
             {!isSingleFile && (
               <Tabs
-                className="dumi-default-previewer-tabs"
-                prefixCls="dumi-default-tabs"
+                className="dumi-vite-previewer-tabs"
+                prefixCls="dumi-vite-tabs"
                 moreIcon="···"
                 defaultActiveKey={String(activeKey)}
                 onChange={(key) => setActiveKey(Number(key))}

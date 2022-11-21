@@ -22,7 +22,7 @@ const SourceCode: FC<{ children: string; lang: Language }> = ({
   const [isCopied, setIsCopied] = useState(false);
 
   return (
-    <div className="dumi-default-source-code">
+    <div className="dumi-vite-source-code">
       <CopyToClipboard
         text={children}
         onCopy={() => {
@@ -33,7 +33,7 @@ const SourceCode: FC<{ children: string; lang: Language }> = ({
       >
         <button
           type="button"
-          className="dumi-default-source-code-copy"
+          className="dumi-vite-source-code-copy"
           data-copied={isCopied || undefined}
         >
           {isCopied ? <IconCheck /> : <IconCopy />}
