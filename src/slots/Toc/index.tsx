@@ -1,13 +1,13 @@
-import { Scrollspy as ScrollSpy } from '@makotot/ghostui/src/Scrollspy';
-import { useLocation, useRouteMeta, useSiteData } from 'dumi';
+import { Scrollspy as ScrollSpy } from "@makotot/ghostui/src/Scrollspy";
+import { useLocation, useRouteMeta, useSiteData } from "dumi";
 import React, {
   useEffect,
   useRef,
   useState,
   type FC,
   type RefObject,
-} from 'react';
-import './index.less';
+} from "react";
+import "./index.less";
 
 const Toc: FC = () => {
   const { pathname } = useLocation();
@@ -53,7 +53,7 @@ const Toc: FC = () => {
                     <a
                       href={link}
                       title={item.title}
-                      {...(activeIndex === i ? { className: 'active' } : {})}
+                      {...(activeIndex === i ? { className: "active" } : {})}
                     >
                       {item.title}
                     </a>

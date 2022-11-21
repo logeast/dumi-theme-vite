@@ -1,6 +1,6 @@
-import { useRouteMeta } from 'dumi';
-import React, { type FC } from 'react';
-import './index.less';
+import { useRouteMeta } from "dumi";
+import React, { type FC } from "react";
+import "./index.less";
 
 const Features: FC = () => {
   const { frontmatter } = useRouteMeta();

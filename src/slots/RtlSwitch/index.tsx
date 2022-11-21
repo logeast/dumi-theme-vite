@@ -1,8 +1,8 @@
-import { useSiteData } from 'dumi';
-import React, { useEffect, useState, type FC } from 'react';
-import './index.less';
+import { useSiteData } from "dumi";
+import React, { useEffect, useState, type FC } from "react";
+import "./index.less";
 
-const LS_RTL_KEY = 'dumi:rtl';
+const LS_RTL_KEY = "dumi:rtl";
 
 const RtlSwitch: FC = () => {
   const [rtl, setRtl] = useState(false);
@@ -11,7 +11,7 @@ const RtlSwitch: FC = () => {
   useEffect(() => {
     if (localStorage.getItem(LS_RTL_KEY)) {
       setRtl(true);
-      document.documentElement.setAttribute('data-direction', 'rtl');
+      document.documentElement.setAttribute("data-direction", "rtl");
     }
   }, []);
 
@@ -22,16 +22,16 @@ const RtlSwitch: FC = () => {
       className="dumi-vite-lang-switch"
       onClick={() => {
         if (rtl) {
-          document.documentElement.removeAttribute('data-direction');
+          document.documentElement.removeAttribute("data-direction");
           localStorage.removeItem(LS_RTL_KEY);
         } else {
-          document.documentElement.setAttribute('data-direction', 'rtl');
-          localStorage.setItem(LS_RTL_KEY, '1');
+          document.documentElement.setAttribute("data-direction", "rtl");
+          localStorage.setItem(LS_RTL_KEY, "1");
         }
         setRtl(!rtl);
       }}
     >
-      {rtl ? 'LTR' : 'RTL'}
+      {rtl ? "LTR" : "RTL"}
     </span>
   );
 };

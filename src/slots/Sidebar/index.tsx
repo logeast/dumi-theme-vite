@@ -1,7 +1,7 @@
-import { NavLink, useLocation, useRouteMeta, useSidebarData } from 'dumi';
-import Toc from 'dumi/theme/slots/Toc';
-import React, { type FC } from 'react';
-import './index.less';
+import { NavLink, useLocation, useRouteMeta, useSidebarData } from "dumi";
+import Toc from "dumi/theme/slots/Toc";
+import React, { type FC } from "react";
+import "./index.less";
 
 const Sidebar: FC = () => {
   const { pathname } = useLocation();
@@ -20,7 +20,7 @@ const Sidebar: FC = () => {
               <NavLink to={child.link} title={child.title} end>
                 {child.title}
               </NavLink>
-              {child.link === pathname && meta.frontmatter.toc === 'menu' && (
+              {child.link === pathname && meta.frontmatter.toc === "menu" && (
                 <Toc />
               )}
             </dd>

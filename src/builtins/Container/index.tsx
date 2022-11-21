@@ -1,9 +1,9 @@
-import { ReactComponent as IconSuccess } from '@ant-design/icons-svg/inline-svg/outlined/check-circle.svg';
-import { ReactComponent as IconError } from '@ant-design/icons-svg/inline-svg/outlined/close-circle.svg';
-import { ReactComponent as IconInfo } from '@ant-design/icons-svg/inline-svg/outlined/info-circle.svg';
-import { ReactComponent as IconWarning } from '@ant-design/icons-svg/inline-svg/outlined/warning.svg';
-import React, { useState, type FC, type ReactNode } from 'react';
-import './index.less';
+import { ReactComponent as IconSuccess } from "@ant-design/icons-svg/inline-svg/outlined/check-circle.svg";
+import { ReactComponent as IconError } from "@ant-design/icons-svg/inline-svg/outlined/close-circle.svg";
+import { ReactComponent as IconInfo } from "@ant-design/icons-svg/inline-svg/outlined/info-circle.svg";
+import { ReactComponent as IconWarning } from "@ant-design/icons-svg/inline-svg/outlined/warning.svg";
+import React, { useState, type FC, type ReactNode } from "react";
+import "./index.less";
 
 const ICONS = {
   info: IconInfo,

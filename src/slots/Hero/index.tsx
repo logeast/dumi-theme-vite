@@ -1,12 +1,12 @@
-import { Link, useRouteMeta } from 'dumi';
-import HeroTitle from 'dumi/theme/slots/HeroTitle';
-import React, { type FC } from 'react';
-import './index.less';
+import { Link, useRouteMeta } from "dumi";
+import HeroTitle from "dumi/theme/slots/HeroTitle";
+import React, { type FC } from "react";
+import "./index.less";
 
 const Hero: FC = () => {
   const { frontmatter } = useRouteMeta();
 
-  if (!('hero' in frontmatter)) return null;
+  if (!("hero" in frontmatter)) return null;
 
   return (
     <div className="dumi-vite-hero">

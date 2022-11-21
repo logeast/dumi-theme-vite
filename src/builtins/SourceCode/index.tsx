@@ -1,17 +1,17 @@
-import { ReactComponent as IconCheck } from '@ant-design/icons-svg/inline-svg/outlined/check.svg';
-import { ReactComponent as IconCopy } from '@ant-design/icons-svg/inline-svg/outlined/copy.svg';
-import Highlight, { defaultProps, type Language } from 'prism-react-renderer';
-import 'prismjs/themes/prism-coy.css';
-import React, { useRef, useState, type FC } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import './index.less';
+import { ReactComponent as IconCheck } from "@ant-design/icons-svg/inline-svg/outlined/check.svg";
+import { ReactComponent as IconCopy } from "@ant-design/icons-svg/inline-svg/outlined/copy.svg";
+import Highlight, { defaultProps, type Language } from "prism-react-renderer";
+import "prismjs/themes/prism-coy.css";
+import React, { useRef, useState, type FC } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import "./index.less";
 
 /**
  * define DSL which can be highlighted as similar language
  */
 const SIMILAR_DSL: Record<string, Language> = {
-  acss: 'css',
-  axml: 'markup',
+  acss: "css",
+  axml: "markup",
 };
 
 const SourceCode: FC<{ children: string; lang: Language }> = ({

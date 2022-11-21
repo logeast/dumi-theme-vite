@@ -1,11 +1,11 @@
-import { ReactComponent as IconSearch } from '@ant-design/icons-svg/inline-svg/outlined/search.svg';
-import { useIntl, useSiteSearch } from 'dumi';
-import React, { useEffect, useRef, useState, type FC } from 'react';
-import SearchResult from '../SearchResult';
-import './index.less';
+import { ReactComponent as IconSearch } from "@ant-design/icons-svg/inline-svg/outlined/search.svg";
+import { useIntl, useSiteSearch } from "dumi";
+import React, { useEffect, useRef, useState, type FC } from "react";
+import SearchResult from "../SearchResult";
+import "./index.less";
 
 const isAppleDevice = /(mac|iphone|ipod|ipad)/i.test(
-  typeof navigator !== 'undefined' ? navigator?.platform : '',
+  typeof navigator !== "undefined" ? navigator?.platform : "",
 );
 
 const SearchBar: FC = () => {
@@ -13,26 +13,26 @@ const SearchBar: FC = () => {
   const imeWaiting = useRef(false);
   const [focusing, setFocusing] = useState(false);
   const input = useRef<HTMLInputElement>(null);
-  const [symbol, setSymbol] = useState('⌘');
+  const [symbol, setSymbol] = useState("⌘");
   const { keywords, setKeywords, result, loading } = useSiteSearch();
 
   useEffect(() => {
     // why put useEffect?
     // to avoid Text content mismatch between server & client in ssr
     if (!isAppleDevice) {
-      setSymbol('Ctrl');
+      setSymbol("Ctrl");
     }
 
     const handler = (ev: KeyboardEvent) => {
-      if ((isAppleDevice ? ev.metaKey : ev.ctrlKey) && ev.key === 'k') {
+      if ((isAppleDevice ? ev.metaKey : ev.ctrlKey) && ev.key === "k") {
         input.current?.focus();
         ev.preventDefault();
       }
     };
 
-    document.addEventListener('keydown', handler);
+    document.addEventListener("keydown", handler);
 
-    return () => document.removeEventListener('keydown', handler);
+    return () => document.removeEventListener("keydown", handler);
   }, []);
 
   return (
@@ -53,9 +53,9 @@ const SearchBar: FC = () => {
           }, 1);
         }}
         onKeyDown={(ev) => {
-          if (['ArrowDown', 'ArrowUp'].includes(ev.key)) ev.preventDefault();
+          if (["ArrowDown", "ArrowUp"].includes(ev.key)) ev.preventDefault();
           // esc to blur input
-          if (ev.key === 'Escape' && !imeWaiting.current)
+          if (ev.key === "Escape" && !imeWaiting.current)
             ev.currentTarget.blur();
         }}
         onChange={(ev) => {
@@ -66,7 +66,7 @@ const SearchBar: FC = () => {
             }
           }, 1);
         }}
-        placeholder={intl.formatMessage({ id: 'header.search.placeholder' })}
+        placeholder={intl.formatMessage({ id: "header.search.placeholder" })}
         ref={input}
       />
       <span className="dumi-vite-search-shortcut">{symbol} K</span>

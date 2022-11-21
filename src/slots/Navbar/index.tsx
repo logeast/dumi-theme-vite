@@ -1,6 +1,6 @@
-import { Link, useLocation, useNavData } from 'dumi';
-import React, { type FC } from 'react';
-import './index.less';
+import { Link, useLocation, useNavData } from "dumi";
+import React, { type FC } from "react";
+import "./index.less";
 
 const Navbar: FC = () => {
   const nav = useNavData();
@@ -18,7 +18,7 @@ const Navbar: FC = () => {
             <Link
               to={item.link}
               {...(pathname.startsWith(item.activePath || item.link)
-                ? { className: 'active' }
+                ? { className: "active" }
                 : {})}
             >
               {item.title}

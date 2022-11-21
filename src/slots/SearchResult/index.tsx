@@ -1,13 +1,13 @@
-import { ReactComponent as IconInbox } from '@ant-design/icons-svg/inline-svg/outlined/inbox.svg';
-import { FormattedMessage, history, Link, type useSiteSearch } from 'dumi';
+import { ReactComponent as IconInbox } from "@ant-design/icons-svg/inline-svg/outlined/inbox.svg";
+import { FormattedMessage, history, Link, type useSiteSearch } from "dumi";
 import React, {
   Fragment,
   useCallback,
   useEffect,
   useState,
   type FC,
-} from 'react';
-import './index.less';
+} from "react";
+import "./index.less";
 
 const IconTitle: FC = () => {
   return (
@@ -50,22 +50,22 @@ const ICONS_MAPPING = {
   demo: IconDemo,
 };
 
-type ISearchResult = ReturnType<typeof useSiteSearch>['result'];
+type ISearchResult = ReturnType<typeof useSiteSearch>["result"];
 
 type ISearchFlatData = (
   | {
-      type: 'title';
-      value: Pick<ISearchResult[0], 'title'>;
+      type: "title";
+      value: Pick<ISearchResult[0], "title">;
     }
   | {
-      type: 'hint';
+      type: "hint";
       activeIndex: number;
-      value: ISearchResult[0]['hints'][0];
+      value: ISearchResult[0]["hints"][0];
     }
 )[];
 
 const Highlight: FC<{
-  texts: ISearchResult[0]['hints'][0]['highlightTexts'];
+  texts: ISearchResult[0]["hints"][0]["highlightTexts"];
 }> = (props) => {
   return (
     <>
@@ -86,7 +86,7 @@ const useFlatSearchData = (data: ISearchResult) => {
     data.forEach((item) => {
       if (item.title) {
         ret.push({
-          type: 'title',
+          type: "title",
           value: {
             title: item.title,
           },
@@ -94,7 +94,7 @@ const useFlatSearchData = (data: ISearchResult) => {
       }
       item.hints.forEach((hint) => {
         ret.push({
-          type: 'hint',
+          type: "hint",
           activeIndex: activeIndex++,
           value: hint,
         });
@@ -119,27 +119,27 @@ const SearchResult: FC<{ data: ISearchResult; loading: boolean }> = (props) => {
   useEffect(() => {
     const handler = (ev: KeyboardEvent) => {
       // TODO: scroll into view for invisible items
-      if (ev.key === 'ArrowDown') {
+      if (ev.key === "ArrowDown") {
         setActiveIndex((activeIndex + 1) % histsCount);
-      } else if (ev.key === 'ArrowUp') {
+      } else if (ev.key === "ArrowUp") {
         setActiveIndex((activeIndex + histsCount - 1) % histsCount);
-      } else if (ev.key === 'Enter' && activeIndex >= 0) {
+      } else if (ev.key === "Enter" && activeIndex >= 0) {
         const item = data.find(
-          (item) => item.type === 'hint' && item.activeIndex === activeIndex,
-        )!.value as ISearchResult[0]['hints'][0];
+          (item) => item.type === "hint" && item.activeIndex === activeIndex,
+        )!.value as ISearchResult[0]["hints"][0];
 
         history.push(item.link);
         (document.activeElement as HTMLInputElement).blur();
       }
 
-      if (['Escape', 'Enter'].includes(ev.key)) {
+      if (["Escape", "Enter"].includes(ev.key)) {
         setActiveIndex(-1);
       }
     };
 
-    document.addEventListener('keydown', handler);
+    document.addEventListener("keydown", handler);
 
-    return () => document.removeEventListener('keydown', handler);
+    return () => document.removeEventListener("keydown", handler);
   });
 
   return (
@@ -155,7 +155,7 @@ const SearchResult: FC<{ data: ISearchResult; loading: boolean }> = (props) => {
       {Boolean(props.data.length || props.loading) ? (
         <dl>
           {data.map((item, i) =>
-            item.type === 'title' ? (
+            item.type === "title" ? (
               <dt key={String(i)}>{item.value.title}</dt>
             ) : (
               <dd key={String(i)}>

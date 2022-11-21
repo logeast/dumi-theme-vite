@@ -1,8 +1,8 @@
-import { useIntl, useRouteMeta } from 'dumi';
-import React, { type FC } from 'react';
-import './index.less';
+import { useIntl, useRouteMeta } from "dumi";
+import React, { type FC } from "react";
+import "./index.less";
 
-type IContentTabs = ReturnType<typeof useRouteMeta>['tabs'];
+type IContentTabs = ReturnType<typeof useRouteMeta>["tabs"];
 
 export interface IContentTabsProps {
   tabs: IContentTabs;
@@ -23,7 +23,7 @@ const ContentTabs: FC<IContentTabsProps> = ({
     <ul className="dumi-vite-content-tabs">
       <li onClick={() => onChange()} data-active={!key || undefined}>
         <button type="button">
-          {intl.formatMessage({ id: 'content.tabs.default' })}
+          {intl.formatMessage({ id: "content.tabs.default" })}
         </button>
       </li>
       {tabs!.map((tab) => (

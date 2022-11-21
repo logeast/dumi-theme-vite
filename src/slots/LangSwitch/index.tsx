@@ -1,4 +1,4 @@
-import { ReactComponent as IconDown } from '@ant-design/icons-svg/inline-svg/outlined/down.svg';
+import { ReactComponent as IconDown } from "@ant-design/icons-svg/inline-svg/outlined/down.svg";
 import {
   history,
   Link,
@@ -6,11 +6,11 @@ import {
   useLocale,
   useLocation,
   useSiteData,
-} from 'dumi';
-import React, { useEffect, useState, type FC } from 'react';
-import './index.less';
+} from "dumi";
+import React, { useEffect, useState, type FC } from "react";
+import "./index.less";
 
-type ILocaleItem = ReturnType<typeof useSiteData>['locales'][0];
+type ILocaleItem = ReturnType<typeof useSiteData>["locales"][0];
 
 function getTargetLocalePath({
   pathname,
@@ -22,12 +22,12 @@ function getTargetLocalePath({
   target: ILocaleItem;
 }) {
   const clearPath =
-    'base' in current
-      ? pathname.replace(current.base.replace(/\/$/, ''), '')
-      : pathname.replace(new RegExp(`${current.suffix}$`), '');
+    "base" in current
+      ? pathname.replace(current.base.replace(/\/$/, ""), "")
+      : pathname.replace(new RegExp(`${current.suffix}$`), "");
 
-  return 'base' in target
-    ? `${target.base}${clearPath}`.replace(/^\/\//, '/')
+  return "base" in target
+    ? `${target.base}${clearPath}`.replace(/^\/\//, "/")
     : `${clearPath}${target.suffix}`;
 }
 

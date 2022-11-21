@@ -1,8 +1,8 @@
-import { IPreviewerProps, useLocation, useSiteData } from 'dumi';
-import Device from 'dumi/theme/slots/Device';
-import PreviewerActions from 'dumi/theme/slots/PreviewerActions';
-import React, { type FC } from 'react';
-import './index.less';
+import { IPreviewerProps, useLocation, useSiteData } from "dumi";
+import Device from "dumi/theme/slots/Device";
+import PreviewerActions from "dumi/theme/slots/PreviewerActions";
+import React, { type FC } from "react";
+import "./index.less";
 
 const Previewer: FC<IPreviewerProps> = (props) => {
   const { hash } = useLocation();
@@ -31,7 +31,7 @@ const Previewer: FC<IPreviewerProps> = (props) => {
           {props.iframe ? (
             <iframe
               style={
-                ['string', 'number'].includes(typeof props.iframe)
+                ["string", "number"].includes(typeof props.iframe)
                   ? { height: Number(props.iframe) }
                   : {}
               }

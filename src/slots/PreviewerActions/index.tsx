@@ -1,24 +1,24 @@
-import { ReactComponent as IconCodeSandbox } from '@ant-design/icons-svg/inline-svg/outlined/code-sandbox.svg';
+import { ReactComponent as IconCodeSandbox } from "@ant-design/icons-svg/inline-svg/outlined/code-sandbox.svg";
 // import { ReactComponent as IconCodePen } from '@ant-design/icons-svg/inline-svg/outlined/codepen.svg';
-import { ReactComponent as IconStackBlitz } from '@ant-design/icons-svg/inline-svg/outlined/thunderbolt.svg';
+import { ReactComponent as IconStackBlitz } from "@ant-design/icons-svg/inline-svg/outlined/thunderbolt.svg";
 import {
   openCodeSandbox,
   openStackBlitz,
   useIntl,
   useSiteData,
   type IPreviewerProps,
-} from 'dumi';
-import SourceCode from 'dumi/theme/builtins/SourceCode';
-import PreviewerActionsExtra from 'dumi/theme/slots/PreviewerActionsExtra';
-import Tabs from 'rc-tabs';
-import React, { useState, type FC } from 'react';
-import './index.less';
+} from "dumi";
+import SourceCode from "dumi/theme/builtins/SourceCode";
+import PreviewerActionsExtra from "dumi/theme/slots/PreviewerActionsExtra";
+import Tabs from "rc-tabs";
+import React, { useState, type FC } from "react";
+import "./index.less";
 
 export interface IPreviewerActionsProps extends IPreviewerProps {
   /**
    * disabled actions
    */
-  disabledActions?: ('CSB' | 'CODEPEN' | 'STACKBLITZ' | 'EXTERNAL')[];
+  disabledActions?: ("CSB" | "CODEPEN" | "STACKBLITZ" | "EXTERNAL")[];
 }
 
 const IconCode: FC = () => (
@@ -43,7 +43,7 @@ const IconExternalLink: FC = () => (
 const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
   const intl = useIntl();
   const files = Object.entries(props.asset.dependencies).filter(
-    ([, { type }]) => type === 'FILE',
+    ([, { type }]) => type === "FILE",
   );
   const {
     themeConfig: { hd },
@@ -52,17 +52,17 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
   const [activeKey, setActiveKey] = useState(0);
   const [showCode, setShowCode] = useState(isH5);
   const isSingleFile = files.length === 1;
-  const lang = (files[activeKey][0].match(/\.([^.]+)$/)?.[1] || 'text') as any;
+  const lang = (files[activeKey][0].match(/\.([^.]+)$/)?.[1] || "text") as any;
 
   return (
     <>
       <div className="dumi-vite-previewer-actions">
-        {!props.disabledActions?.includes('CSB') && (
+        {!props.disabledActions?.includes("CSB") && (
           <button
             className="dumi-vite-previewer-action-btn"
             type="button"
             data-dumi-tooltip={intl.formatMessage({
-              id: 'previewer.actions.codesandbox',
+              id: "previewer.actions.codesandbox",
             })}
             onClick={() => openCodeSandbox(props)}
           >
@@ -80,12 +80,12 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
             <IconCodePen />
           </button>
         )} */}
-        {!props.disabledActions?.includes('STACKBLITZ') && (
+        {!props.disabledActions?.includes("STACKBLITZ") && (
           <button
             className="dumi-vite-previewer-action-btn"
             type="button"
             data-dumi-tooltip={intl.formatMessage({
-              id: 'previewer.actions.stackblitz',
+              id: "previewer.actions.stackblitz",
             })}
             onClick={() => openStackBlitz(props)}
           >
@@ -93,14 +93,14 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
           </button>
         )}
 
-        {!props.disabledActions?.includes('EXTERNAL') && (
+        {!props.disabledActions?.includes("EXTERNAL") && (
           <a
             target="_blank"
             rel="noreferrer"
             href={props.demoUrl}
             className="dumi-vite-previewer-action-btn"
             data-dumi-tooltip={intl.formatMessage({
-              id: 'previewer.actions.separate',
+              id: "previewer.actions.separate",
             })}
           >
             <IconExternalLink />
@@ -113,7 +113,7 @@ const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
             type="button"
             onClick={() => setShowCode((prev) => !prev)}
             data-dumi-tooltip={intl.formatMessage({
-              id: `previewer.actions.code.${showCode ? 'shrink' : 'expand'}`,
+              id: `previewer.actions.code.${showCode ? "shrink" : "expand"}`,
             })}
           >
             {showCode ? <IconCodeExpand /> : <IconCode />}

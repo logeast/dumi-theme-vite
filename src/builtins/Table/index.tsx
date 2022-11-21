@@ -1,12 +1,12 @@
-import throttle from 'lodash.throttle';
+import throttle from "lodash.throttle";
 import React, {
   useEffect,
   useRef,
   useState,
   type FC,
   type ReactNode,
-} from 'react';
-import './index.less';
+} from "react";
+import "./index.less";
 
 const Table: FC<{ children: ReactNode }> = ({ children, ...props }) => {
   const container = useRef<HTMLDivElement>(null);
@@ -23,12 +23,12 @@ const Table: FC<{ children: ReactNode }> = ({ children, ...props }) => {
       }, 100);
 
       handler();
-      elm.addEventListener('scroll', handler);
-      window.addEventListener('resize', handler);
+      elm.addEventListener("scroll", handler);
+      window.addEventListener("resize", handler);
 
       return () => {
-        elm.removeEventListener('scroll', handler);
-        window.removeEventListener('resize', handler);
+        elm.removeEventListener("scroll", handler);
+        window.removeEventListener("resize", handler);
       };
     }
   }, []);
