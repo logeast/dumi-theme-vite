@@ -2,8 +2,8 @@
 title: dumi - 为组件研发而生的静态站点框架
 hero:
   title: Copyboards
-  description: |
-    为组件研发而生的静态站点框架
+  text: Next Clipboard History Application
+  tagline: A searchable clipboard history application for copy and paste.
   actions:
     - text: 立即上手
       link: /guide

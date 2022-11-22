@@ -1,17 +1,12 @@
-@import (reference) '../../styles/variables.less';
-
-body {
-  margin: 0;
-  padding: 0;
-}
+@import (reference) "../../styles/variables.less";
+@import (reference) "../../styles/assets.less";
 
 .@{prefix}-doc-layout {
-  font-family: sans-serif;
   background-color: @c-site-bg;
 
   @media @mobile {
     &::before {
-      content: '';
+      content: "";
       position: fixed;
       z-index: 11; // 1 more than header
       top: 0;

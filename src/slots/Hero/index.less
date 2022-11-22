@@ -1,13 +1,12 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-hero {
   position: relative;
   margin: -@s-header-height - 20 auto -160px auto;
   max-width: @s-content-width;
   height: 932px;
-  padding-top: 220px;
-  text-align: center;
   box-sizing: border-box;
+  display: flex;
 
   @media @mobile {
     margin-top: -@s-header-height-m - 20;
@@ -15,33 +14,26 @@
     height: 660px;
   }
 
-  + * {
-    position: relative;
+  &-main,
+  &-image {
+    flex: 1;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    pointer-events: none;
-    background: no-repeat center/cover;
-    background-image: url('https://gw.alipayobjects.com/zos/bmw-prod/a6c3488a-994c-4dd3-8e92-2324d9a1ca48/l9dmd9wl_w2858_h1864.png');
-  }
-
-  > p {
-    margin: 32px;
-    color: @c-text-secondary;
-    font-size: 20px;
-    line-height: 1.6;
+  &-text {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 600;
 
     @media @mobile {
-      font-size: 16px;
+      font-size: 48px;
+      line-height: 56px;
     }
+  }
+
+  &-tagline {
+    font-size: 24px;
+    line-height: 36px;
+    color: @c-text-secondary;
   }
 
   &-actions {
