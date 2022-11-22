@@ -1,5 +1,5 @@
 ---
-title: dumi - 为组件研发而生的静态站点框架
+title: Copyboards - Next Clipboard History Application
 hero:
   title: Copyboards
   text: Next Clipboard History Application
@@ -7,8 +7,12 @@ hero:
   actions:
     - text: 立即上手
       link: /guide
-    - text: GitHub
-      link: https://github.com/umijs/dumi
+    - text: Copyboards GitHub
+      link: https://github.com/logeast/copyboards
+    - text: Theme GitHub
+      link: https://github.com/logeast/dumi-theme-vite
+  image:
+
 features:
   - title: 更好的编译性能
     emoji: 🚀

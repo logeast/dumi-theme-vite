@@ -2,11 +2,13 @@
 
 .@{prefix}-hero {
   position: relative;
-  margin: -@s-header-height - 20 auto -160px auto;
+  margin: 0 auto;
+  padding: 64px 120px;
   max-width: @s-content-width;
-  height: 932px;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
+  gap: 32px;
 
   @media @mobile {
     margin-top: -@s-header-height-m - 20;
@@ -23,6 +25,7 @@
     font-size: 56px;
     line-height: 64px;
     font-weight: 600;
+    padding-top: 8px;
 
     @media @mobile {
       font-size: 48px;
@@ -33,46 +36,73 @@
   &-tagline {
     font-size: 24px;
     line-height: 36px;
-    color: @c-text-secondary;
+    color: @c-text-note;
+    padding-top: 12px;
   }
 
   &-actions {
-    margin-top: 48px;
+    padding-top: 32px;
     display: flex;
-    justify-content: center;
+    gap: 12px;
 
     > a {
-      display: inline-block;
-      height: 52px;
-      font-size: 18px;
-      line-height: 52px;
-      text-decoration: none;
-      min-width: 168px;
-      border-radius: 26px;
-      box-sizing: border-box;
-      transition: opacity 0.2s;
-
-      @media @mobile {
-        font-size: 16px;
-        height: 42px;
-        line-height: 40px;
-        min-width: 128px;
-      }
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      &:not(:first-child) {
-        margin-inline-start: 48px;
-        color: @c-primary;
-        border: 1px solid @c-primary;
-      }
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      padding: 0 20px;
+      border-radius: 100px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
 
       &:first-child {
+        font-weight: 600;
         color: #fff;
         background-color: @c-primary;
       }
+
+      &:first-child:hover {
+        opacity: 0.9;
+      }
+
+      &:not(:first-child) {
+        color: @c-text;
+        border: 1px solid @c-border-light;
+        background-color: @c-button-bg;
+
+        &:hover {
+          border-color: @c-border;
+          background-color: @c-button-hover-bg;
+        }
+      }
+    }
+  }
+
+  &-image {
+    min-height: 100%;
+
+    &-wrapper {
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      outline: 1px solid red;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-src {
+      max-width: 320px;
+      max-height: 320px;
+      object-fit: cover;
     }
   }
 }
