@@ -1,7 +1,7 @@
 ---
 title: dumi - 为组件研发而生的静态站点框架
 hero:
-  title: dumi1
+  title: Copyboards
   description: |
     为组件研发而生的静态站点框架
   actions:
