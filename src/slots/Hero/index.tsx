@@ -1,8 +1,8 @@
 import { Link, useRouteMeta } from "dumi";
 import React, { type FC } from "react";
+import { LOGO_320_BASE64 } from "../../slots/DefaultLogo";
 import HeroTitle from "../../slots/HeroTitle";
 import "./index.less";
-import LargeLogo from "./logo@20x.png";
 
 const Hero: FC = () => {
   const { frontmatter } = useRouteMeta();
@@ -48,7 +48,7 @@ const Hero: FC = () => {
           <div className="dumi-vite-hero-image-bg"></div>
           <img
             className="dumi-vite-hero-image-src"
-            src={frontmatter.hero!.image || LargeLogo}
+            src={frontmatter.hero!.image || LOGO_320_BASE64}
             alt={frontmatter.hero!.title}
           />
         </div>
