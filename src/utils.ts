@@ -1,1 +1,1 @@
-export const prefixCls = 'dumi-vite-theme';
+export const prefixCls = "dumi-vite-theme";
