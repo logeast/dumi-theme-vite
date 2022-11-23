@@ -1,4 +1,4 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-navbar {
   list-style: none;
@@ -6,6 +6,7 @@
   padding: 0;
   display: flex;
   align-items: center;
+  height: 100%;
 
   @media @mobile {
     display: block;
@@ -14,8 +15,8 @@
 
   > li {
     font-size: 14px;
-    line-height: 1;
     text-align: center;
+    height: 100%;
 
     @media @mobile {
       padding: 12px 0;
@@ -25,6 +26,9 @@
       color: @c-text-secondary;
       text-decoration: none;
       transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      height: 100%;
 
       &:hover {
         color: @c-primary;

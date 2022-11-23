@@ -1,71 +1,48 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-features {
-  margin: 0 auto 48px;
+  margin: 0 auto;
   max-width: @s-content-width;
-  padding: 0 24px;
-  overflow: hidden;
-  box-sizing: border-box;
+  padding: 32px 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 
-  &[data-cols='2'] > &-item {
-    width: 46%;
-
-    &:nth-child(odd) {
-      margin-inline-end: 8%;
-    }
-
-    @media @mobile {
-      width: 100%;
-      margin-inline-end: 0;
-    }
-  }
-
-  &[data-cols='3'] > &-item {
-    width: 31.4%;
-
-    &:not(:nth-child(3n)) {
-      margin-inline-end: 2.9%;
-    }
-
-    @media @mobile {
-      width: 100%;
-      margin-inline-end: 0;
-    }
+  @media @mobile {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   &-item {
-    margin: 12px 0;
-    float: left;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: @c-card-bg-light;
+    border: 1px solid @c-card-bg-light;
 
     > i {
-      font-size: 64px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      background-color: @c-card-hover-bg;
+      border-radius: 6px;
       font-style: normal;
-
-      @media @mobile {
-        font-size: 48px;
-      }
+      margin-bottom: 20px;
     }
 
-    > h3 {
-      margin: 4px 0;
-      color: @c-text;
-      font-weight: normal;
-      font-size: 20px;
-
-      @media @mobile {
-        font-size: 18px;
-      }
+    > h2 {
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 600;
     }
 
     > p {
-      margin: 12px 0;
+      padding-top: 8px;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
       color: @c-text-secondary;
-      font-size: 16px;
-      line-height: 1.475;
-
-      @media @mobile {
-        font-size: 14px;
-      }
 
       a {
         color: @c-primary;

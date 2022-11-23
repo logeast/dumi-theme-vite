@@ -1,7 +1,8 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-search-bar {
   position: relative;
+  background-color: @c-card-bg-light;
 
   @media @mobile {
     // TODO: support search for mobile devices
@@ -30,7 +31,7 @@
     padding-inline-end: 12px;
     color: @c-text;
     font-size: 14px;
-    border: 1px solid @c-border;
+    border: 1px solid @c-border-light;
     border-radius: 8px;
     box-sizing: border-box;
     outline: none;
@@ -73,27 +74,27 @@
   .@{prefix}-search-popover {
     position: absolute;
     top: 100%;
-    inset-inline-end: 0;
+    inset-inline-start: 0;
     display: flex;
     flex-direction: column;
     width: 540px;
     max-height: 460px;
-    margin-top: 18px;
+    margin-top: 8px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 30px rgb(0 0 0 / 20%);
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 100%;
-      inset-inline-end: 100px;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border: 8px solid transparent;
-      border-bottom-color: #fff;
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 100%;
+    //   inset-inline-end: 100px;
+    //   display: inline-block;
+    //   width: 0;
+    //   height: 0;
+    //   border: 8px solid transparent;
+    //   border-bottom-color: #fff;
+    // }
 
     > section {
       flex: 1;

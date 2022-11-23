@@ -16,7 +16,7 @@ const Features: FC = () => {
       {frontmatter.features!.map(({ title, description, emoji }) => (
         <div key={title} className="dumi-vite-features-item">
           {emoji && <i>{emoji}</i>}
-          {title && <h3>{title}</h3>}
+          {title && <h2>{title}</h2>}
           {description && (
             <p dangerouslySetInnerHTML={{ __html: description }} />
           )}
