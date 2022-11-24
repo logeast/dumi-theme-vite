@@ -2,6 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/dumi-theme-vite.svg?style=flat)](https://npmjs.org/package/dumi-theme-vite)
 [![NPM downloads](http://img.shields.io/npm/dm/dumi-theme-vite.svg?style=flat)](https://npmjs.org/package/dumi-theme-vite)
+[![GitHub Repo stars](https://img.shields.io/github/stars/logeast/dumi-theme-vite?style=social)](https://github.com/logeast/dumi-theme-vite)
 
 A theme package similar in appearance to [Vite Document](https://vitejs.dev/) for the [dumi](https://d.umijs.org) framework.
 
