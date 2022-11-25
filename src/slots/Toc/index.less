@@ -1,23 +1,25 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-toc {
   list-style: none;
-  margin: 12px 0 0;
   padding: 4px 0;
-  border-inline-start: 1px solid @c-border;
+  border-inline-start: 1px solid @c-border-light;
+  transition: color 0.25s;
 
   &:empty {
     display: none;
   }
 
   > li {
+    margin: 3px 0;
+
     > a {
       display: block;
-      margin: 6px 0;
-      padding: 3px 12px;
+      padding: 0 16px;
       color: @c-text-secondary;
       font-size: 13px;
-      line-height: 1;
+      line-height: 22px;
+      font-weight: 600;
       text-decoration: none;
       white-space: nowrap;
       overflow: hidden;
@@ -34,7 +36,7 @@
       }
     }
 
-    &[data-depth='3'] > a {
+    &[data-depth="3"] > a {
       padding-inline-start: 20px;
     }
   }

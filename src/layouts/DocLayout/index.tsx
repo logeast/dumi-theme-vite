@@ -64,7 +64,7 @@ const DocLayout: FC = () => {
         </Content>
         {fm.toc === "content" && (
           <div className="dumi-vite-doc-layout-toc-wrapper">
-            <h4>TABLE OF CONTENTS</h4>
+            <h4>On this page</h4>
             <Toc />
           </div>
         )}
