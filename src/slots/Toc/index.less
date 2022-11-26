@@ -3,6 +3,7 @@
 .@{prefix}-toc {
   list-style: none;
   padding: 4px 0;
+  margin: 0;
   border-inline-start: 1px solid @c-border-light;
   transition: color 0.25s;
 
@@ -11,15 +12,13 @@
   }
 
   > li {
-    margin: 3px 0;
-
     > a {
       display: block;
       padding: 0 16px;
       color: @c-text-secondary;
       font-size: 13px;
-      line-height: 22px;
-      font-weight: 600;
+      line-height: 28px;
+      font-weight: 500;
       text-decoration: none;
       white-space: nowrap;
       overflow: hidden;
@@ -37,7 +36,7 @@
     }
 
     &[data-depth="3"] > a {
-      padding-inline-start: 20px;
+      padding-inline-start: 32px;
     }
   }
 }
