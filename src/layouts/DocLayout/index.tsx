@@ -60,7 +60,7 @@ const DocLayout: FC = () => {
         <Sidebar />
         <Content>
           {outlet}
-          <Footer />
+          {!sidebar && <Footer />}
         </Content>
         {fm.toc === "content" && (
           <div className="dumi-vite-doc-layout-toc-wrapper">
