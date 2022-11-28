@@ -1,6 +1,6 @@
 import { NavLink, useLocation, useRouteMeta, useSidebarData } from "dumi";
-import Toc from "dumi/theme/slots/Toc";
 import React, { type FC } from "react";
+import Toc from "../../slots/Toc";
 import "./index.less";
 
 const Sidebar: FC = () => {
@@ -27,6 +27,7 @@ const Sidebar: FC = () => {
           ))}
         </dl>
       ))}
+      <div className="dumi-vite-sidebar-bg"></div>
     </div>
   );
 };

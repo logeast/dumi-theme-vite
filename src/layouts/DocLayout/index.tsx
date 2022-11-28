@@ -38,7 +38,7 @@ const DocLayout: FC = () => {
           <meta property="og:keywords" content={fm.keywords.join(",")} />
         )}
       </Helmet>
-      <Header />
+      <Header hasSidebar={sidebar} />
       <Hero />
       <Features />
       {sidebar && (

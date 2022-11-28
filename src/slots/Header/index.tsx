@@ -9,17 +9,22 @@ import RtlSwitch from "../../slots/RtlSwitch";
 import SearchBar from "../../slots/SearchBar";
 import "./index.less";
 
-const Header: FC = () => {
+const Header: FC = ({ hasSidebar = false }: { hasSidebar?: boolean }) => {
   // const { frontmatter } = useRouteMeta();
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <div
-      className="dumi-vite-header"
+      className={`dumi-vite-header ${
+        hasSidebar ? "dumi-vite-header-has-sidebar" : ""
+      }`}
       // data-static={Boolean(frontmatter.hero) || undefined}
       data-mobile-active={showMenu || undefined}
       onClick={() => setShowMenu(false)}
     >
+      {hasSidebar ? (
+        <div className="dumi-vite-header-has-sidebar-bg"></div>
+      ) : null}
       <div className="dumi-vite-header-content">
         <section className="dumi-vite-header-left">
           <Logo />

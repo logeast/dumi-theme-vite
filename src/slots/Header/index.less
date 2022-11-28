@@ -89,3 +89,19 @@
     }
   }
 }
+
+.@{prefix}-header-has-sidebar {
+  .@{prefix}-header-left {
+    width: calc(@s-sidebar-width + 24px);
+  }
+
+  &-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc((100% - @s-content-width) / 2 + @s-sidebar-width + 24px);
+    height: @s-header-height;
+    background-color: @c-card-bg-light;
+    z-index: -1;
+  }
+}

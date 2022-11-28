@@ -1,4 +1,4 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-sidebar {
   position: sticky;
@@ -11,6 +11,16 @@
   padding-inline-end: 32px;
   box-sizing: border-box;
   overflow: auto;
+
+  &-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc((100% - @s-content-width) / 2 + @s-sidebar-width + 24px);
+    background-color: @c-card-bg-light;
+    z-index: -1;
+  }
 
   @media @mobile {
     position: fixed;
