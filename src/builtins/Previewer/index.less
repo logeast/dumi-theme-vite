@@ -1,4 +1,4 @@
-@import (reference) '../../styles/variables.less';
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-previewer {
   margin: 24px 0 32px;
@@ -37,7 +37,7 @@
       overflow: hidden;
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         height: 24px;
         background-color: @c-border-light;
@@ -47,7 +47,7 @@
         @btn-gap: 8px;
         @btn-width: 12px;
 
-        content: '';
+        content: "";
         position: absolute;
         top: 5px;
         left: @btn-gap;
@@ -135,9 +135,9 @@
   }
 
   // h5 mode
-  &[data-h5] {
-    border-style: none;
-  }
+  // &[data-h5] {
+  //   border-style: none;
+  // }
 
   &-flex {
     display: flex;
