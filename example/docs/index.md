@@ -1,15 +1,13 @@
 ---
-title: Dumpress | 你的下一个 Dumi 主题
+title: Dumpress | Next Theme Package for Dumi
 hero:
   title: Dumpress
   text: Next Theme Package for Dumi
   tagline: Dumi powered theme package similar to VitePress
   actions:
-    - text: 立即上手
+    - text: Get Started
       link: /guide
-    - text: Copyboards GitHub
-      link: https://github.com/logeast/copyboards
-    - text: Theme GitHub
+    - text: Star on GitHub
       link: https://github.com/logeast/dumi-theme-vite
   image:
 
