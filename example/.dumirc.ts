@@ -5,6 +5,6 @@ export default defineConfig({
   base: "/dumi-theme-vite/",
   publicPath: "/dumi-theme-vite/",
   themeConfig: {
-    name: "Copyboards",
+    name: "Dumpress",
   },
 });

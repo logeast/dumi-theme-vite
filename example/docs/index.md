@@ -1,9 +1,9 @@
 ---
-title: Copyboards - Next Clipboard History Application
+title: Dumpress | 你的下一个 Dumi 主题
 hero:
-  title: Copyboards
-  text: Next Clipboard History Application
-  tagline: A searchable clipboard history application for copy and paste.
+  title: Dumpress
+  text: Next Theme Package for Dumi
+  tagline: Dumi powered theme package similar to VitePress
   actions:
     - text: 立即上手
       link: /guide
