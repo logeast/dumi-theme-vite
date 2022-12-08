@@ -1,5 +1,4 @@
 ---
-toc: content
 nav: 指南
 group: 基础
 order: 3

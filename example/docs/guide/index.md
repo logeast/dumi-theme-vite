@@ -1,5 +1,4 @@
 ---
-toc: content
 nav:
   title: 指南
   order: -1

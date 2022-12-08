@@ -1,5 +1,4 @@
 ---
-toc: content
 nav: 指南
 group:
   title: 基础

@@ -128,3 +128,5 @@ group:
 :::
 
 除了框架提供的基础 Markdown 配置项以外，dumi 的默认主题还提供了如下 Markdown 配置项：
+
+<embed src="../theme/default.md#RE-/<!-- md config[^]+ md config end -->/"></embed>
