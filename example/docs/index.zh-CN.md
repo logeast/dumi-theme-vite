@@ -1,9 +1,9 @@
 ---
-title: Dumpress | Next Theme Package for Dumi
+title: Dumpress | 你的下个 Dumi 主题包
 hero:
   title: Dumpress
-  text: Next Theme Package for Dumi
-  tagline: Dumi powered theme package similar to VitePress
+  text: 你的下个 Dumi 主题包
+  tagline: Dumi 驱动的，类似 VitePress 的网站主题
   actions:
     - text: Get Started
       link: /guide
