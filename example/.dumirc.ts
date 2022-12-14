@@ -1,7 +1,9 @@
 import { defineConfig } from "dumi";
 
 export default defineConfig({
-  mfsu: false,
+  plugins: ["@umijs/plugins/dist/tailwindcss"],
+  tailwindcss: {},
+  // mfsu: false,
   base: "/dumi-theme-vite/",
   publicPath: "/dumi-theme-vite/",
   themeConfig: {
