@@ -1,5 +1,5 @@
-import { defineConfig } from 'father';
+import { defineConfig } from "father";
 
 export default defineConfig({
-  plugins: ['father-plugin-dumi-theme'],
+  plugins: ["father-plugin-dumi-theme"],
 });
