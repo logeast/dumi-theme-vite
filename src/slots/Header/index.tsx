@@ -1,7 +1,7 @@
 import { ReactComponent as IconClose } from "@ant-design/icons-svg/inline-svg/outlined/close.svg";
 import { ReactComponent as IconMenu } from "@ant-design/icons-svg/inline-svg/outlined/menu.svg";
 // import { useRouteMeta } from "dumi";
-import React, { useState, type FC } from "react";
+import React, { useState } from "react";
 import LangSwitch from "../../slots/LangSwitch";
 import Logo from "../../slots/Logo";
 import Navbar from "../../slots/Navbar";
@@ -9,7 +9,7 @@ import RtlSwitch from "../../slots/RtlSwitch";
 import SearchBar from "../../slots/SearchBar";
 import "./index.less";
 
-const Header: FC = ({ hasSidebar = false }: { hasSidebar?: boolean }) => {
+const Header = ({ hasSidebar = false }: { hasSidebar?: boolean }) => {
   // const { frontmatter } = useRouteMeta();
   const [showMenu, setShowMenu] = useState(false);
 

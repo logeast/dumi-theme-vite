@@ -119,10 +119,10 @@
 
   .@{prefix}-header + main > &,
   .@{prefix}-doc-layout-mobile-bar + main > & {
-    min-height: calc(100vh - @s-header-height);
+    min-height: calc(100vh - var(--dv-nav-height));
 
     @media @mobile {
-      min-height: calc(100vh - @s-header-height-m);
+      min-height: calc(100vh - var(--dv-nav-height-mobile));
     }
   }
 }

@@ -1,4 +1,4 @@
-@import "../../styles/variables.less";
+@import (reference) "../../styles/variables.less";
 
 .@{prefix}-hero {
   position: relative;
@@ -11,7 +11,7 @@
   gap: 32px;
 
   @media @mobile {
-    margin-top: -@s-header-height-m - 20;
+    margin-top: calc((var(--dv-nav-height) - 20) * -1);
     padding-top: 160px;
     height: 660px;
   }
