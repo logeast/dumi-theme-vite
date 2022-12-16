@@ -19,7 +19,7 @@ const DocLayout: FC = () => {
 
   return (
     <div
-      className="deprecated-dumi-vite-doc-layout dumi-vite-doc-layout max-w-8xl mx-auto px-4 sm:px-6 md:px-8"
+      className="dumi-vite-doc-layout"
       data-mobile-sidebar-active={showSidebar || undefined}
       onClick={() => setShowSidebar(false)}
     >
@@ -56,8 +56,10 @@ const DocLayout: FC = () => {
           </button>
         </div>
       )}
-      <main>
+      <aside className="dumi-vite-doc-layout-aside">
         <Sidebar />
+      </aside>
+      <main className="dumi-vite-doc-layout-main">
         <Content>
           {outlet}
           {!sidebar && <Footer />}

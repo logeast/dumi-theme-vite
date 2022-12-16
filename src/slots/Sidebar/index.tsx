@@ -11,7 +11,7 @@ const Sidebar: FC = () => {
   if (!sidebar) return null;
 
   return (
-    <div className="dumi-vite-sidebar">
+    <nav className="dumi-vite-sidebar">
       {sidebar.map((item, i) => (
         <dl className="dumi-vite-sidebar-group" key={String(i)}>
           {item.title && <dt>{item.title}</dt>}
@@ -27,8 +27,7 @@ const Sidebar: FC = () => {
           ))}
         </dl>
       ))}
-      <div className="dumi-vite-sidebar-bg"></div>
-    </div>
+    </nav>
   );
 };
 
