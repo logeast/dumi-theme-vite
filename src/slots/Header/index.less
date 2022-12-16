@@ -92,14 +92,20 @@
 
 .@{prefix}-header-has-sidebar {
   .@{prefix}-header-left {
-    width: calc(@s-sidebar-width + 24px);
+    width: calc(
+      (100% - (var(--dv-layout-max-width) - 64px)) / 2 + var(--dv-sidebar-width) -
+        32px
+    );
   }
 
   &-bg {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc((100% - @s-content-width) / 2 + @s-sidebar-width + 24px);
+    width: calc(
+      (100% - (var(--dv-layout-max-width) - 64px)) / 2 + var(--dv-sidebar-width) -
+        32px
+    );
     height: var(--dv-nav-height);
     background-color: @c-card-bg-light;
     z-index: -1;
