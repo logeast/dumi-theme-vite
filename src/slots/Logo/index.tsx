@@ -1,6 +1,6 @@
 import { Link, useLocale, useSiteData } from "dumi";
 import React, { type FC } from "react";
-import { LOGO_64_BASE64 } from "../../slots/DefaultLogo";
+import { LOGO_64_BASE64 } from "../DefaultLogo";
 import "./index.less";
 
 const Logo: FC = () => {
