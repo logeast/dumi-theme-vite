@@ -48,6 +48,9 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "dependencies": {
+    "@ant-design/icons-svg": "^4.2.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
