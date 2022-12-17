@@ -63,12 +63,14 @@ const DocLayout: FC = () => {
       )}
       <main className="dumi-vite-doc-layout-main">
         <Content>{outlet}</Content>
-        {fm.toc === "content" && (
-          <div className="dumi-vite-doc-layout-toc-wrapper">
-            <h4>On this page</h4>
-            <Toc />
-          </div>
-        )}
+        <div className="dumi-vite-doc-layout-main-aside">
+          {fm.toc === "content" && (
+            <div className="dumi-vite-doc-layout-toc-wrapper">
+              <div className="dumi-vite-doc-layout-toc-title">On this page</div>
+              <Toc />
+            </div>
+          )}
+        </div>
       </main>
       {!sidebar && <Footer />}
     </div>
