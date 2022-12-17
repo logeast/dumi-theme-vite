@@ -105,16 +105,22 @@
       width: 360px;
       height: 360px;
       border-radius: 50%;
-      outline: 1px solid red;
       background: @c-hero-image-bg;
       filter: @c-hero-image-filter;
     }
 
     &-src {
-      max-width: 320px;
-      max-height: 320px;
-      object-fit: cover;
-      position: relative;
+      z-index: 1;
+
+      img,
+      svg {
+        width: 320px;
+        height: 320px;
+      }
+
+      img {
+        object-fit: cover;
+      }
     }
   }
 }

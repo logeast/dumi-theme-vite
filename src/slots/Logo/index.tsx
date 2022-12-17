@@ -1,6 +1,6 @@
 import { Link, useLocale, useSiteData } from "dumi";
 import React, { type FC } from "react";
-import { LOGO_64_BASE64 } from "../DefaultLogo";
+import DefaultLogo from "../DefaultLogo";
 import "./index.less";
 
 const Logo: FC = () => {
@@ -9,7 +9,11 @@ const Logo: FC = () => {
 
   return (
     <Link className="dumi-vite-logo" to={"base" in locale ? locale.base : "/"}>
-      <img src={themeConfig.logo || LOGO_64_BASE64} alt={themeConfig.name} />
+      {themeConfig.logo ? (
+        <img src={themeConfig.logo} alt={themeConfig.name} />
+      ) : (
+        <DefaultLogo />
+      )}
       {themeConfig.name}
     </Link>
   );
