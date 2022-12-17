@@ -2,11 +2,14 @@
 
 .@{prefix}-header {
   position: relative;
-  z-index: 10;
+  z-index: var(--dv-z-index-nav);
+  // padding: 0 32px;
 
   &:not([data-static]) {
+    position: fixed;
     top: 0;
-    position: sticky;
+    left: 0;
+    right: 0;
     background-color: fadeout(@c-site-bg, 30%);
     backdrop-filter: blur(6px);
 
@@ -21,8 +24,7 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: 0 24px;
-    max-width: @s-content-width;
+    max-width: calc(var(--dv-layout-max-width) + 2px);
     height: var(--dv-nav-height);
     box-sizing: border-box;
 
@@ -92,10 +94,7 @@
 
 .@{prefix}-header-has-sidebar {
   .@{prefix}-header-left {
-    width: calc(
-      (100% - (var(--dv-layout-max-width) - 64px)) / 2 + var(--dv-sidebar-width) -
-        32px
-    );
+    width: var(--dv-sidebar-width);
   }
 
   &-bg {

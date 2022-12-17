@@ -38,7 +38,7 @@ const DocLayout: FC = () => {
           <meta property="og:keywords" content={fm.keywords.join(",")} />
         )}
       </Helmet>
-      <Header hasSidebar={sidebar} />
+      <Header />
       <Hero />
       <Features />
       {sidebar && (
@@ -56,14 +56,13 @@ const DocLayout: FC = () => {
           </button>
         </div>
       )}
-      <aside className="dumi-vite-doc-layout-aside">
-        <Sidebar />
-      </aside>
+      {sidebar && (
+        <aside className="dumi-vite-doc-layout-aside">
+          <Sidebar />
+        </aside>
+      )}
       <main className="dumi-vite-doc-layout-main">
-        <Content>
-          {outlet}
-          {!sidebar && <Footer />}
-        </Content>
+        <Content>{outlet}</Content>
         {fm.toc === "content" && (
           <div className="dumi-vite-doc-layout-toc-wrapper">
             <h4>On this page</h4>
@@ -71,6 +70,7 @@ const DocLayout: FC = () => {
           </div>
         )}
       </main>
+      {!sidebar && <Footer />}
     </div>
   );
 };
