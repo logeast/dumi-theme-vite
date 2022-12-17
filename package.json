@@ -1,6 +1,6 @@
 {
   "name": "dumi-theme-vite",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A theme package similar in appearance to Vite Document for the dumi framework.",
   "keywords": [
     "dumi",
