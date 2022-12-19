@@ -17,6 +17,10 @@
       (100% - (var(--dv-layout-max-width) - 64px)) / 2 + var(--dv-sidebar-width) -
         32px
     );
+    @media @w1280 {
+      display: none;
+    }
+
     z-index: var(--dv-z-index-sidebar);
     background-color: var(--dv-c-bg-alt);
   }
@@ -32,6 +36,9 @@
     &-aside {
       flex: 1;
       max-width: 200px;
+      @media @w1024 {
+        display: none;
+      }
     }
   }
 
