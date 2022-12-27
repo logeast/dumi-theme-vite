@@ -1,12 +1,7 @@
 @import "../../styles/variables.less";
 
 .@{prefix}-source-code {
-  @bg-color: @c-card-bg-light; // tint(@c-site-bg, 50%);
-
   position: relative;
-  background-color: @bg-color;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
 
   > pre.prism-code {
     margin: 0;
@@ -15,6 +10,7 @@
     line-height: 1.58;
     direction: ltr;
     background: transparent;
+    border-radius: 8px;
 
     // remove shadow from coy theme
     &::before,
@@ -29,25 +25,25 @@
     top: 9px;
     right: 12px;
     display: inline-block;
-    padding: 8px 12px;
-    background-color: fade(@bg-color, 80%);
+    padding: 8px;
+    background-color: var(--dv-c-text-dark-4);
     border: 0;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s;
 
-    > svg {
-      width: 16px;
-      fill: darken(@c-border, 20%);
+    svg {
+      font-size: 16px;
+      fill: var(--dv-c-text-dark-2);
       transition: fill 0.2s;
     }
 
-    &:hover > svg {
-      fill: darken(@c-border, 30%);
+    &:hover svg {
+      fill: var(--dv-c-text-dark-1);
     }
 
-    &[data-copied] > svg {
-      fill: rgb(11 174 11);
+    &[data-copied] svg {
+      fill: var(--dv-c-green);
     }
   }
 

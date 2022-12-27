@@ -1,6 +1,7 @@
-import { ReactComponent as IconCheck } from "@ant-design/icons-svg/inline-svg/outlined/check.svg";
-import { ReactComponent as IconCopy } from "@ant-design/icons-svg/inline-svg/outlined/copy.svg";
+import { CheckOutlined, CopyOutlined } from "@ant-design/icons";
 import Highlight, { defaultProps, type Language } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/dracula";
+
 import "prismjs/themes/prism-coy.css";
 import React, { useRef, useState, type FC } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -36,14 +37,14 @@ const SourceCode: FC<{ children: string; lang: Language }> = ({
           className="dumi-vite-source-code-copy"
           data-copied={isCopied || undefined}
         >
-          {isCopied ? <IconCheck /> : <IconCopy />}
+          {isCopied ? <CheckOutlined /> : <CopyOutlined />}
         </button>
       </CopyToClipboard>
       <Highlight
         {...defaultProps}
         code={children.trim()}
         language={SIMILAR_DSL[lang] || lang}
-        theme={undefined}
+        theme={theme}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>

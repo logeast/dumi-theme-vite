@@ -50,6 +50,7 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@ant-design/icons-svg": "^4.2.1",
     "@babel/runtime": "^7.20.6",
     "@makotot/ghostui": "^2.0.0",
@@ -62,6 +63,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "@umijs/lint": "^4.0.0",
     "dumi": "^2.0.2",
     "eslint": "^8.23.0",
