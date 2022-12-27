@@ -1,7 +1,9 @@
 @import "../../styles/variables.less";
 
 .markdown {
-  color: @c-text;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--dv-c-text-1);
 
   // hyperlink
   a {
@@ -10,10 +12,10 @@
 
   // inline code
   *:not(pre) code {
-    padding: 2px 5px;
-    color: #d56161;
-    background: darken(@c-site-bg, 2%);
-    border-radius: 2px;
+    padding: 3px 6px;
+    color: var(--dv-c-text-code);
+    background: var(--dv-c-bg-mute);
+    border-radius: 4px;
   }
 
   // pre tag
@@ -98,17 +100,16 @@
 
 .@{prefix}-content {
   flex: 1;
-  min-width: 0;
-  max-width: 100%;
-  box-sizing: border-box;
+  min-width: 480px;
+  max-width: 720px;
+  margin: 0 auto;
 
   &:not([data-no-sidebar]) {
-    padding: @s-content-padding;
+    padding: 24px 48px 48px;
     background-color: #fff;
 
     @media @mobile {
       max-width: initial;
-      padding: 24px;
       border-radius: 0;
       box-shadow: none;
     }

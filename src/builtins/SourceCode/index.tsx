@@ -1,6 +1,6 @@
 import { CheckOutlined, CopyOutlined } from "@ant-design/icons";
 import Highlight, { defaultProps, type Language } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/dracula";
+import theme from "./dracula-theme";
 
 import "prismjs/themes/prism-coy.css";
 import React, { useRef, useState, type FC } from "react";
