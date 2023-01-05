@@ -13,15 +13,20 @@ const Features: FC = () => {
         [3, 2].find((n) => frontmatter.features!.length % n === 0) || 3
       }
     >
-      {frontmatter.features!.map(({ title, description, emoji }) => (
-        <div key={title} className="dumi-vite-features-item">
-          {emoji && <i>{emoji}</i>}
-          {title && <h2>{title}</h2>}
-          {description && (
-            <p dangerouslySetInnerHTML={{ __html: description }} />
-          )}
-        </div>
-      ))}
+      {frontmatter.features!.map(
+        ({ title, description, emoji, icon, details }) => (
+          <div key={title} className="dumi-vite-features-item">
+            {emoji || (icon && <i>{emoji || icon}</i>)}
+            {title && <h2>{title}</h2>}
+            {description ||
+              (details && (
+                <p
+                  dangerouslySetInnerHTML={{ __html: description || details }}
+                />
+              ))}
+          </div>
+        ),
+      )}
     </div>
   ) : null;
 };
