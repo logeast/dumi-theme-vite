@@ -1,5 +1,5 @@
-@import (reference) '../../styles/variables.less';
-@import '../../styles/utils.less';
+@import (reference) "../../styles/variables.less";
+@import "../../styles/utils.less";
 
 .@{prefix}-previewer {
   &-actions {
@@ -44,7 +44,7 @@
     padding: 0 12px;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -116,18 +116,20 @@
       transition: all 0.2s;
 
       &:hover {
-        color: @c-text;
+        color: @c-primary;
       }
     }
 
     &-active &-btn {
-      color: @c-text;
+      color: @c-primary;
+      font-weight: 600;
     }
   }
 
   &-ink-bar {
     position: absolute;
-    height: 1px;
+    height: 4px;
+    border-radius: 4px;
     background: @c-primary;
     transition: left 0.2s, width 0.2s;
     pointer-events: none;

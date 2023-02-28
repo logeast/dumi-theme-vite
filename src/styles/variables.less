@@ -21,6 +21,22 @@
 @c-hero-image-bg: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
 @c-hero-image-filter: blur(80px);
 
+// dark theme colors
+// @dark-selector be injected by less-loader in feature/theme/index.ts
+@dark-solid-amount: 15%;
+@dark-light-amount: 22%;
+@dark-border-amount: 73%;
+@c-primary-dark: darken(@c-primary, @dark-solid-amount);
+@c-warning-dark: darken(@c-warning, @dark-solid-amount);
+@c-success-dark: darken(@c-success, @dark-solid-amount);
+@c-error-dark: darken(@c-error, @dark-solid-amount);
+@c-text-dark: lighten(@c-text-note, @dark-light-amount);
+@c-text-secondary-dark: lighten(@c-text-secondary, @dark-light-amount);
+@c-text-note-dark: lighten(@c-text, @dark-light-amount);
+@c-border-dark: darken(@c-border, @dark-border-amount);
+@c-border-less-dark: darken(@c-border-light, @dark-border-amount);
+@c-site-bg-dark: darken(@c-site-bg, 95%);
+
 @o-font-family: "Inter var experimental", "Inter var", ui-sans-serif, system-ui,
   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji",

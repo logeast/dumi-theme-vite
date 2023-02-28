@@ -1,19 +1,21 @@
 import { ReactComponent as IconClose } from "@ant-design/icons-svg/inline-svg/outlined/close.svg";
 import { ReactComponent as IconMenu } from "@ant-design/icons-svg/inline-svg/outlined/menu.svg";
-import { useSidebarData } from "dumi";
+import { useSidebarData, useSiteData } from "dumi";
 // import { useRouteMeta } from "dumi";
 import React, { FC, useState } from "react";
-import LangSwitch from "../../slots/LangSwitch";
-import Logo from "../../slots/Logo";
-import Navbar from "../../slots/Navbar";
-import RtlSwitch from "../../slots/RtlSwitch";
-import SearchBar from "../../slots/SearchBar";
+import ColorSwitch from "../ColorSwitch";
+import LangSwitch from "../LangSwitch";
+import Logo from "../Logo";
+import Navbar from "../Navbar";
+import RtlSwitch from "../RtlSwitch";
+import SearchBar from "../SearchBar";
 import "./index.less";
 
 const Header: FC = () => {
   // const { frontmatter } = useRouteMeta();
   const [showMenu, setShowMenu] = useState(false);
   const sidebar = useSidebarData();
+  const { themeConfig } = useSiteData();
 
   return (
     <div
@@ -35,6 +37,7 @@ const Header: FC = () => {
             <Navbar />
             <LangSwitch />
             <RtlSwitch />
+            {themeConfig.prefersColor.switch && <ColorSwitch />}
           </div>
         </section>
         <button
