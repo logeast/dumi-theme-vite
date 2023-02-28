@@ -32,6 +32,9 @@ jobs:
         # run: pnpm prepublishOnly
         run: npm run prepublishOnly
 
+      - name: User config
+        run: git config user.name logeast && git config user.email logeast@outlook.com
+        
       - name: Publish
         run: npm version patch
 
