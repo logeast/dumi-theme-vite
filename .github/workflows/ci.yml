@@ -10,7 +10,7 @@ jobs:
   build:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    name: 'Build&Test: node-16, ubuntu-latest'
+    name: "Build&Test: node-16, ubuntu-latest"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -18,19 +18,32 @@ jobs:
       # - name: Install pnpm
       #   uses: pnpm/action-setup@v2.2.4
 
-      - name: Set node version
+      # - name: Set node version
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 16
+      #     # cache: 'pnpm'
+
+      # - name: Install deps
+      #   # run: pnpm install
+      #   run: npm install
+
+      # - name: Build
+      #   # run: pnpm prepublishOnly
+      #   run: npm run prepublishOnly
+
+      - name: Set node version to 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 16.x
+          registry-url: https://registry.npmjs.org/
           # cache: 'pnpm'
 
       - name: Install deps
         # run: pnpm install
         run: npm install
-
-      - name: Build
-        # run: pnpm prepublishOnly
-        run: npm run prepublishOnly
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
       - name: push tags
         run: |
@@ -38,6 +51,7 @@ jobs:
           git config user.email logeast@outlook.com
           npm version patch
           git push --follow-tags
+          git push
 
       - name: Publish package
         # run: pnpm -r --no-git-checks publish
