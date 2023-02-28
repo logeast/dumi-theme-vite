@@ -1,0 +1,23 @@
+# CONTRIBUTING
+
+## Start
+
+## Build and publish
+
+1. Change the version of the package.json file to the next number.
+
+Auto update the patch version.
+
+```bash
+npm version patch
+```
+
+Also can use `minor` or `major` replace `patch` to update the package version.
+
+2. Add a new tag
+
+```bash
+git tag v0.0.x
+git commit -am "feat: update tag"
+git push origin --tags
+```
