@@ -35,9 +35,9 @@ const Header: FC = () => {
           <SearchBar />
           <div className="dumi-vite-header-right-aside">
             <Navbar />
-            <LangSwitch />
-            <RtlSwitch />
-            {themeConfig.prefersColor.switch && <ColorSwitch />}
+            {/* <LangSwitch /> */}
+            {/* <RtlSwitch /> */}
+            {/* {themeConfig.prefersColor.switch && <ColorSwitch />} */}
           </div>
         </section>
         <button
