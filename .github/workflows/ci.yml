@@ -32,11 +32,18 @@ jobs:
         # run: pnpm prepublishOnly
         run: npm run prepublishOnly
 
-      - name: User config
-        run: git config user.name logeast && git config user.email logeast@outlook.com
-        
-      - name: Publish
-        run: npm version patch
+      - name: push tags
+        run: |
+          git config user.name logeast
+          git config user.email logeast@outlook.com
+          npm version patch
+          git push --follow-tags
+
+      - name: Publish package
+        # run: pnpm -r --no-git-checks publish
+        run: npm -r --no-git-checks publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   # lint:
   #   timeout-minutes: 10
