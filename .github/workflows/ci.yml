@@ -31,6 +31,8 @@ jobs:
       - name: Build
         # run: pnpm prepublishOnly
         run: npm run prepublishOnly
+
+      - name: Publish
         run: npm version patch
 
   # lint:
