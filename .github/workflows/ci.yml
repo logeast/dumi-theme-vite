@@ -31,6 +31,7 @@ jobs:
       - name: Build
         # run: pnpm prepublishOnly
         run: npm run prepublishOnly
+        run: npm version patch
 
   # lint:
   #   timeout-minutes: 10
